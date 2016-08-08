@@ -9,6 +9,7 @@
 		".git/*",
 		".vscode/*",
 		"tools/*",
+		".gitignore",
 		"*.md"
 	]
 }
