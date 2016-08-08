@@ -1,0 +1,14 @@
+{
+	"title"		: "CS:GO Knives SWEPs",
+	"type"		: "weapon",
+	"tags"		: [ "fun", "realism" ],
+	"ignore"	: [
+		"*.psd",
+		"*.vcproj",
+		"*.svn*",
+		".git/*",
+		".vscode/*",
+		"tools/*",
+		"*.md"
+	]
+}

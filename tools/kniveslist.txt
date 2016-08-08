@@ -1,0 +1,173 @@
+# Empty lines and lines starting from hashtag are ignored.
+
+# Lua_name, Model_name, Knife_name, Skin_name, Skin_index, Are_daggers
+
+# No skins
+"csgo_bayonet", "csgo_bayonet", "Bayonet Knife", "noskin", 0, 0
+"csgo_bowie", "csgo_bowie", "Bowie knife", "noskin", 0, 0
+"csgo_butterfly", "csgo_butterfly", "Butterfly Knife", "noskin", 0, 0
+"csgo_cssource", "csgo_cssource", "CS:Source Knife", "noskin", 0, 0
+"csgo_daggers", "csgo_push", "Shadow Daggers", "noskin", 0, 1
+"csgo_default_knife", "csgo_default", "Default CT Knife", "noskin", 0, 0
+"csgo_default_t", "csgo_default_t", "Default T Knife", "noskin", 0, 0
+"csgo_falchion", "csgo_falchion", "Falchion Knife", "noskin", 0, 0
+"csgo_flip", "csgo_flip", "Flip Knife", "noskin", 0, 0
+"csgo_gut", "csgo_gut", "Gut Knife", "noskin", 0, 0
+"csgo_huntsman", "csgo_tactical", "Huntsman Knife", "noskin", 0, 0
+"csgo_karambit", "csgo_karambit", "Karambit Knife", "noskin", 0, 0
+"csgo_m9", "csgo_m9", "M9 Bayonet Knife", "noskin", 0, 0
+
+# Default
+"csgo_default_golden", "csgo_default", "Default CT Knife", "Golden", 1, 0
+"csgo_default_t_golden", "csgo_default_t", "Default T Knife", "Golden", 1, 0
+
+# Bayonet
+"csgo_bayonet_bluesteel", "csgo_bayonet", "Bayonet Knife", "Blue Steel", 11, 0
+"csgo_bayonet_boreal", "csgo_bayonet", "Bayonet Knife", "Boreal Forest", 1, 0
+"csgo_bayonet_case", "csgo_bayonet", "Bayonet Knife", "Case Hardened", 2, 0
+"csgo_bayonet_crimsonwebs", "csgo_bayonet", "Bayonet Knife", "Crimson Webs", 3, 0
+"csgo_bayonet_damascus", "csgo_bayonet", "Bayonet Knife", "Damascus Steel", 4, 0
+"csgo_bayonet_ddpat", "csgo_bayonet", "Bayonet Knife", "Forest DDPAT", 5, 0
+"csgo_bayonet_fade", "csgo_bayonet", "Bayonet Knife", "Fade", 6, 0
+"csgo_bayonet_marblefade", "csgo_bayonet", "Bayonet Knife", "Marble Fade", 13, 0
+"csgo_bayonet_night", "csgo_bayonet", "Bayonet Knife", "Night", 7, 0
+"csgo_bayonet_rustcoat", "csgo_bayonet", "Bayonet Knife", "Rust Coat", 12, 0
+"csgo_bayonet_slaughter", "csgo_bayonet", "Bayonet Knife", "Slaughter", 8, 0
+"csgo_bayonet_tiger", "csgo_bayonet", "Bayonet Knife", "Tiger Tooth", 9, 0
+"csgo_bayonet_ultraviolet", "csgo_bayonet", "Bayonet Knife", "Ultraviolet", 10, 0
+
+# Bowie
+"csgo_bowie_bluesteel", "csgo_bowie", "Bowie knife", "Blue Steel", 11, 0
+"csgo_bowie_boreal", "csgo_bowie", "Bowie knife", "Boreal Forest", 1, 0
+"csgo_bowie_case", "csgo_bowie", "Bowie knife", "Case Hardened", 2, 0
+"csgo_bowie_crimsonwebs", "csgo_bowie", "Bowie knife", "Crimson Web", 9, 0
+"csgo_bowie_damascus", "csgo_bowie", "Bowie knife", "Damascus Steel", 3, 0
+"csgo_bowie_ddpat", "csgo_bowie", "Bowie knife", "Forest DDPAT", 4, 0
+"csgo_bowie_fade", "csgo_bowie", "Bowie knife", "Fade", 10, 0
+"csgo_bowie_marblefade", "csgo_bowie", "Bowie knife", "Marble Fade", 13, 0
+"csgo_bowie_night", "csgo_bowie", "Bowie knife", "Night", 5, 0
+"csgo_bowie_rustcoat", "csgo_bowie", "Bowie knife", "Rust Coat", 12, 0
+"csgo_bowie_slaughter", "csgo_bowie", "Bowie knife", "Slaughter", 6, 0
+"csgo_bowie_tiger", "csgo_bowie", "Bowie knife", "Tiger Tooth", 7, 0
+"csgo_bowie_ultraviolet", "csgo_bowie", "Bowie knife", "Ultraviolet", 8, 0
+
+# Butterfly
+"csgo_butterfly_bluesteel", "csgo_butterfly", "Butterfly Knife", "Blue Steel", 11, 0
+"csgo_butterfly_boreal", "csgo_butterfly", "Butterfly Knife", "Boreal Forest", 1, 0
+"csgo_butterfly_case", "csgo_butterfly", "Butterfly Knife", "Case Hardened", 2, 0
+"csgo_butterfly_crimsonwebs", "csgo_butterfly", "Butterfly Knife", "Crimson Webs", 3, 0
+"csgo_butterfly_damascus", "csgo_butterfly", "Butterfly Knife", "Damascus Steel", 4, 0
+"csgo_butterfly_ddpat", "csgo_butterfly", "Butterfly Knife", "Forest DDPAT", 5, 0
+"csgo_butterfly_fade", "csgo_butterfly", "Butterfly Knife", "Fade", 6, 0
+"csgo_butterfly_marblefade", "csgo_butterfly", "Butterfly Knife", "Marble Fade", 13, 0
+"csgo_butterfly_night", "csgo_butterfly", "Butterfly Knife", "Night", 7, 0
+"csgo_butterfly_rustcoat", "csgo_butterfly", "Butterfly Knife", "Rust Coat", 12, 0
+"csgo_butterfly_slaughter", "csgo_butterfly", "Butterfly Knife", "Slaughter", 8, 0
+"csgo_butterfly_tiger", "csgo_butterfly", "Butterfly Knife", "Tiger Tooth", 9, 0
+"csgo_butterfly_ultraviolet", "csgo_butterfly", "Butterfly Knife", "Ultraviolet", 10, 0
+
+# Shadow Daggers
+"csgo_daggers_bluesteel", "csgo_push", "Shadow Daggers", "Blue Steel", 12, 1
+"csgo_daggers_boreal", "csgo_push", "Shadow Daggers", "Boreal Forest", 1, 1
+"csgo_daggers_case", "csgo_push", "Shadow Daggers", "Case Hardened", 2, 1
+"csgo_daggers_damascus", "csgo_push", "Shadow Daggers", "Damascus Steel", 3, 1
+"csgo_daggers_ddpat", "csgo_push", "Shadow Daggers", "Forest DDPAT", 4, 1
+"csgo_daggers_fade", "csgo_push", "Shadow Daggers", "Fade", 5, 1
+"csgo_daggers_greyscaled", "csgo_push", "Shadow Daggers", "Greyscaled", 6, 1
+"csgo_daggers_marblefade", "csgo_push", "Shadow Daggers", "Marble Fade", 14, 1
+"csgo_daggers_night", "csgo_push", "Shadow Daggers", "Night", 7, 1
+"csgo_daggers_rustcoat", "csgo_push", "Shadow Daggers", "Rust Coat", 13, 1
+"csgo_daggers_slaughter", "csgo_push", "Shadow Daggers", "Slaughter", 8, 1
+"csgo_daggers_tiger", "csgo_push", "Shadow Daggers", "Tiger Tooth", 9, 1
+"csgo_daggers_ultraviolet", "csgo_push", "Shadow Daggers", "Ultraviolet", 10, 1
+"csgo_daggers_webs", "csgo_push", "Shadow Daggers", "Crimson Webs", 11, 1
+
+# Falchion
+"csgo_falchion_bluesteel", "csgo_falchion", "Falchion Knife", "Blue Steel", 11, 0
+"csgo_falchion_boreal", "csgo_falchion", "Falchion Knife", "Boreal Forest", 1, 0
+"csgo_falchion_case", "csgo_falchion", "Falchion Knife", "Case Hardened", 2, 0
+"csgo_falchion_crimsonwebs", "csgo_falchion", "Falchion Knife", "Crimson Webs", 3, 0
+"csgo_falchion_damascus", "csgo_falchion", "Falchion Knife", "Damascus Steel", 4, 0
+"csgo_falchion_ddpat", "csgo_falchion", "Falchion Knife", "Forest DDPAT", 5, 0
+"csgo_falchion_fade", "csgo_falchion", "Falchion Knife", "Fade", 6, 0
+"csgo_falchion_marblefade", "csgo_falchion", "Falchion Knife", "Marble Fade", 13, 0
+"csgo_falchion_night", "csgo_falchion", "Falchion Knife", "Night", 7, 0
+"csgo_falchion_rustcoat", "csgo_falchion", "Falchion Knife", "Rust Coat", 12, 0
+"csgo_falchion_slaughter", "csgo_falchion", "Falchion Knife", "Slaughter", 8, 0
+"csgo_falchion_tiger", "csgo_falchion", "Falchion Knife", "Tiger Tooth", 9, 0
+"csgo_falchion_ultraviolet", "csgo_falchion", "Falchion Knife", "Ultraviolet", 10, 0
+
+# Flip
+"csgo_flip_bluesteel", "csgo_flip", "Flip Knife", "Blue Steel", 11, 0
+"csgo_flip_boreal", "csgo_flip", "Flip Knife", "Boreal Forest", 1, 0
+"csgo_flip_case", "csgo_flip", "Flip Knife", "Case Hardened", 2, 0
+"csgo_flip_crimsonwebs", "csgo_flip", "Flip Knife", "Crimson Webs", 3, 0
+"csgo_flip_damascus", "csgo_flip", "Flip Knife", "Damascus Steel", 4, 0
+"csgo_flip_ddpat", "csgo_flip", "Flip Knife", "Forest DDPAT", 5, 0
+"csgo_flip_fade", "csgo_flip", "Flip Knife", "Fade", 6, 0
+"csgo_flip_marblefade", "csgo_flip", "Flip Knife", "Marble Fade", 13, 0
+"csgo_flip_night", "csgo_flip", "Flip Knife", "Night", 7, 0
+"csgo_flip_rustcoat", "csgo_flip", "Flip Knife", "Rust Coat", 12, 0
+"csgo_flip_slaughter", "csgo_flip", "Flip Knife", "Slaughter", 8, 0
+"csgo_flip_tiger", "csgo_flip", "Flip Knife", "Tiger Tooth", 9, 0
+"csgo_flip_ultraviolet", "csgo_flip", "Flip Knife", "Ultraviolet", 10, 0
+
+# Gut
+"csgo_gut_bluesteel", "csgo_gut", "Gut Knife", "Blue Steel", 11, 0
+"csgo_gut_boreal", "csgo_gut", "Gut Knife", "Boreal Forest", 1, 0
+"csgo_gut_case", "csgo_gut", "Gut Knife", "Case Hardened", 2, 0
+"csgo_gut_crimsonwebs", "csgo_gut", "Gut Knife", "Crimson Webs", 3, 0
+"csgo_gut_damascus", "csgo_gut", "Gut Knife", "Damascus Steel", 4, 0
+"csgo_gut_ddpat", "csgo_gut", "Gut Knife", "Forest DDPAT", 5, 0
+"csgo_gut_fade", "csgo_gut", "Gut Knife", "Fade", 6, 0
+"csgo_gut_marblefade", "csgo_gut", "Gut Knife", "Marble Fade", 13, 0
+"csgo_gut_night", "csgo_gut", "Gut Knife", "Night", 7, 0
+"csgo_gut_rustcoat", "csgo_gut", "Gut Knife", "Rust Coat", 12, 0
+"csgo_gut_slaughter", "csgo_gut", "Gut Knife", "Slaughter", 8, 0
+"csgo_gut_tiger", "csgo_gut", "Gut Knife", "Tiger Tooth", 9, 0
+"csgo_gut_ultraviolet", "csgo_gut", "Gut Knife", "Ultraviolet", 10, 0
+
+# Huntsman
+"csgo_huntsman_bluesteel", "csgo_tactical", "Huntsman Knife", "Blue Steel", 11, 0
+"csgo_huntsman_boreal", "csgo_tactical", "Huntsman Knife", "Boreal Forest", 1, 0
+"csgo_huntsman_case", "csgo_tactical", "Huntsman Knife", "Case Hardened", 2, 0
+"csgo_huntsman_crimsonwebs", "csgo_tactical", "Huntsman Knife", "Crimson Webs", 3, 0
+"csgo_huntsman_damascus", "csgo_tactical", "Huntsman Knife", "Damascus Steel", 4, 0
+"csgo_huntsman_ddpat", "csgo_tactical", "Huntsman Knife", "Forest DDPAT", 5, 0
+"csgo_huntsman_fade", "csgo_tactical", "Huntsman Knife", "Forest DDPAT", 6, 0
+"csgo_huntsman_marblefade", "csgo_tactical", "Huntsman Knife", "Marble Fade", 13, 0
+"csgo_huntsman_night", "csgo_tactical", "Huntsman Knife", "Night", 7, 0
+"csgo_huntsman_rustcoat", "csgo_tactical", "Huntsman Knife", "Rust Coat", 12, 0
+"csgo_huntsman_slaughter", "csgo_tactical", "Huntsman Knife", "Slaughter", 8, 0
+"csgo_huntsman_tiger", "csgo_tactical", "Huntsman Knife", "Tiger Tooth", 9, 0
+"csgo_huntsman_ultraviolet", "csgo_tactical", "Huntsman Knife", "Ultraviolet", 10, 0
+
+# Karambit
+"csgo_karambit_bluesteel", "csgo_karambit", "Karambit Knife", "Blue Steel", 11, 0
+"csgo_karambit_boreal", "csgo_karambit", "Karambit Knife", "Boreal Forest", 1, 0
+"csgo_karambit_case", "csgo_karambit", "Karambit Knife", "Case Hardened", 2, 0
+"csgo_karambit_crimsonwebs", "csgo_karambit", "Karambit Knife", "Crimson Webs", 3, 0
+"csgo_karambit_damascus", "csgo_karambit", "Karambit Knife", "Damascus Steel", 4, 0
+"csgo_karambit_ddpat", "csgo_karambit", "Karambit Knife", "Forest DDPAT", 5, 0
+"csgo_karambit_fade", "csgo_karambit", "Karambit Knife", "Fade", 6, 0
+"csgo_karambit_marblefade", "csgo_karambit", "Karambit Knife", "Marble Fade", 13, 0
+"csgo_karambit_night", "csgo_karambit", "Karambit Knife", "Night", 7, 0
+"csgo_karambit_rustcoat", "csgo_karambit", "Karambit Knife", "Rust Coat", 12, 0
+"csgo_karambit_slaughter", "csgo_karambit", "Karambit Knife", "Slaughter", 8, 0
+"csgo_karambit_tiger", "csgo_karambit", "Karambit Knife", "Tiger Tooth", 9, 0
+"csgo_karambit_ultraviolet", "csgo_karambit", "Karambit Knife", "Ultraviolet", 10, 0
+
+# M9
+"csgo_m9_bluesteel", "csgo_m9", "M9 Bayonet Knife", "Blue Steel", 11, 0
+"csgo_m9_boreal", "csgo_m9", "M9 Bayonet Knife", "Boreal Forest", 1, 0
+"csgo_m9_case", "csgo_m9", "M9 Bayonet Knife", "Case Hardened", 2, 0
+"csgo_m9_crimsonwebs", "csgo_m9", "M9 Bayonet Knife", "Crimson Webs", 3, 0
+"csgo_m9_damascus", "csgo_m9", "M9 Bayonet Knife", "Damascus Steel", 4, 0
+"csgo_m9_ddpat", "csgo_m9", "M9 Bayonet Knife", "Forest DDPAT", 5, 0
+"csgo_m9_fade", "csgo_m9", "M9 Bayonet Knife", "Fade", 6, 0
+"csgo_m9_marblefade", "csgo_m9", "M9 Bayonet Knife", "Marble Fade", 13, 0
+"csgo_m9_night", "csgo_m9", "M9 Bayonet Knife", "Night", 7, 0
+"csgo_m9_rustcoat", "csgo_m9", "M9 Bayonet Knife", "Rust Coat", 12, 0
+"csgo_m9_slaughter", "csgo_m9", "M9 Bayonet Knife", "Slaughter", 8, 0
+"csgo_m9_tiger", "csgo_m9", "M9 Bayonet Knife", "Tiger Tooth", 9, 0
+"csgo_m9_ultraviolet", "csgo_m9", "M9 Bayonet Knife", "Ultraviolet", 10, 0
