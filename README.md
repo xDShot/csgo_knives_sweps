@@ -40,6 +40,7 @@ Type these in console or in server config:
 
 #### Pull Requests
 Pull Requests are welcome. Although there are no strong restrictions in coding style, please make it so it won't be really hard to understand and it won't take any other dependencies. If you make changes into knives, it's better to add them into template and use script to quickly generate code.
+
 1. Sign up to your Github account
 2. Fork this repo
 3. Commit your changes
@@ -47,6 +48,7 @@ Pull Requests are welcome. Although there are no strong restrictions in coding s
 
 #### Issues
 Report bugs or suggest new features. Make sure there are no already issue you want to create. When you create it, make it descriptive. Non-descriptive issues like 'it doesn't work plz fix' will be probably ignored and closed.
+
 1. Sign up to your Github account
 2. Move into issues tab
 3. Create new issue
