@@ -15,7 +15,7 @@ if ( SERVER ) then
 	CreateConVar("csgo_knives_primary", 1, FCVAR_ARCHIVE, "Allow primary attacks")
 	CreateConVar("csgo_knives_secondary", 1, FCVAR_ARCHIVE, "Allow secondary attacks")
 	CreateConVar("csgo_knives_inspecting", 1, FCVAR_ARCHIVE, "Allow inspecting")
-	CreateConVar("csgo_knives_force_ttt", 0, FCVAR_ARCHIVE, "Forces knives to enable TTT mode. For debug purposes. Normally you shouldn't enable it unless you haven't any trouble getting it work")
+	CreateConVar("csgo_knives_force_ttt", 0, FCVAR_ARCHIVE, "Forces knives to enable TTT mode. For debug purposes. Normally you shouldn't enable it unless you haven't any trouble getting it work in ttt")
 	
 	CreateConVar("csgo_knives_dmg_sec_back", 180, FCVAR_ARCHIVE, "How much damage deal when hit with secondary attack from behind")
 	CreateConVar("csgo_knives_dmg_sec_front", 65, FCVAR_ARCHIVE, "How much damage deal when hit with secondary attack in front or from side")
@@ -109,8 +109,6 @@ SWEP.Icon = "vgui/ttt/icon_nades" -- most generic icon I guess
 function SWEP:SetupDataTables() --This also used for variable declaration and SetVar/GetVar getting work
 	self:NetworkVar( "Float", 0, "InspectTime" )
 	self:NetworkVar( "Float", 1, "IdleTime" )
---	self:NetworkVar( "Entity", 0, "Attacker" ) --Do we need this?
---	self:NetworkVar( "Entity", 1, "Victim" ) --Do we need this?
 end
 
 
@@ -154,6 +152,63 @@ end
 
 
 
+function SWEP:FindHullIntersection(VecSrc, tr, Mins, Maxs, pEntity)
+	
+	local VecHullEnd = VecSrc + ((tr.HitPos - VecSrc) * 2)
+	
+	local tracedata = {}
+
+	tracedata.start		= VecSrc
+	tracedata.endpos	= VecHullEnd
+	tracedata.filter	= pEntity
+	tracedata.mask		= MASK_SOLID
+	tracedata.mins		= Mins
+	tracedata.maxs		= Maxs
+	
+	local tmpTrace = util.TraceLine( tracedata )
+
+	if tmpTrace.Hit then
+		tr = tmpTrace
+		return tr
+	end
+	
+	local Distance	= 999999
+	--local MinMaxs	= { Mins, Maxs }
+
+	for i = 0, 1 do
+		for j = 0, 1 do
+			for k = 0, 1 do
+				
+				local VecEnd = Vector()
+				
+				--VecEnd.x = VecHullEnd.x + MinMaxs[i].x -- Attempt to index a nil value :\
+				--VecEnd.y = VecHullEnd.y + MinMaxs[j].y
+				--VecEnd.z = VecHullEnd.z + MinMaxs[k].z
+				VecEnd.x = VecHullEnd.x + (i>0 and Maxs.x or Mins.x)
+				VecEnd.y = VecHullEnd.y + (j>0 and Maxs.y or Mins.y)
+				VecEnd.z = VecHullEnd.z + (k>0 and Maxs.z or Mins.z)
+				
+				tracedata.endpos = VecEnd
+				
+				tmpTrace = util.TraceLine( tracedata )
+				
+				if tmpTrace.Hit then
+					ThisDistance = (tmpTrace.HitPos - VecSrc):Length()
+
+					if (ThisDistance < Distance) then
+						tr = tmpTrace
+						Distance = ThisDistance
+					end
+				end
+			end -- for k
+		end -- for j
+	end --for i
+
+	return tr
+end
+
+
+
 function SWEP:PrimaryAttack()
 	if not cvars.Bool("csgo_knives_primary", true) or ( CurTime() < self.Weapon:GetNextPrimaryFire() ) then return end
 	self:DoAttack( false )
@@ -172,11 +227,12 @@ function SWEP:DoAttack( Altfire )
 	local Weapon	= self.Weapon
 	local Attacker	= self:GetOwner()
 	local Range		= Altfire and 48 or 64
-	local Forward	= Attacker:GetAimVector()
-	local AttackSrc	= Attacker:EyePos()
-	local AttackEnd	= AttackSrc + Forward * Range
-
+	
 	Attacker:LagCompensation(true)
+	
+	local Forward	= Attacker:GetAimVector()
+	local AttackSrc	= Attacker:GetShootPos()
+	local AttackEnd	= AttackSrc + Forward * Range
 
 	local tracedata = {}
 
@@ -184,17 +240,21 @@ function SWEP:DoAttack( Altfire )
 	tracedata.endpos	= AttackEnd
 	tracedata.filter	= Attacker
 	tracedata.mask		= MASK_SOLID
-	tracedata.mins		= Vector( -16 , -16 , -18 )
-	tracedata.maxs		= Vector( 16, 16 , 18 )
+	tracedata.mins		= Vector( -16, -16, -18 ) -- head_hull_mins
+	tracedata.maxs		= Vector( 16, 16, 18 ) -- head_hull_maxs
 
-	-- We should calculate trajectory twice. If TraceHull hits entity, then we use second trace, otherwise - first.
-	-- It's needed to prevent head-shooting since in CS:GO you cannot headshot with knife
-	local tr1 = util.TraceLine( tracedata )
-	local tr2 = util.TraceHull( tracedata )
-	local tr = IsValid(tr2.Entity) and tr2 or tr1
+	local tr = util.TraceLine( tracedata )
+	if not tr.Hit then tr = util.TraceHull( tracedata ) end
+	if tr.Hit and ( not (IsValid(tr.Entity) and tr.Entity) or tr.HitWorld ) then 
+		-- Calculate the point of intersection of the line (or hull) and the object we hit
+		-- This is and approximation of the "best" intersection
+		local HullDuckMins, HullDuckMaxs = Attacker:GetHullDuck()
+		tr = self:FindHullIntersection(AttackSrc, tr, HullDuckMins, HullDuckMaxs, Attacker)
+		AttackEnd = tr.HitPos -- This is the point on the actual surface (the hull could have hit space)
+	end 
 
 	local DidHit			= tr.Hit and not tr.HitSky
-	local HitEntity			= IsValid(tr.Entity) and tr.Entity or Entity(0) -- 0 is worldspawn... probably... See below why we hit it.
+	local HitEntity			= IsValid(tr.Entity) and tr.Entity or Entity(0) -- Ugly hack to destroy glass surf. 0 is worldspawn.
 	local DidHitPlrOrNPC	= HitEntity and ( HitEntity:IsPlayer() or HitEntity:IsNPC() ) and IsValid( HitEntity )
 
 	Attacker:LagCompensation(false) -- Don't forget to disable it!
@@ -218,7 +278,7 @@ function SWEP:DoAttack( Altfire )
 	damageinfo:SetDamagePosition( AttackEnd )
 	HitEntity:DispatchTraceAttack( damageinfo, tr, Forward )
 
-	util.Decal("ManhackCut", tr.HitPos + tr.HitNormal, tr.HitPos - tr.HitNormal)
+	if tr.HitWorld then util.Decal("ManhackCut", tr.HitPos + tr.HitNormal, tr.HitPos - tr.HitNormal) end
 
 	--Change next attack time
 	local NextAttack = Altfire and 1.0 or DidHit and 0.5 or 0.4
