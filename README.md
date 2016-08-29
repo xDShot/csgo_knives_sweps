@@ -20,21 +20,30 @@ This will be enabled next time you launch game or server.
 #### Manually
 This is recommended for servers' owners and those who want to test it before next release.
 
-Clone this repo or download and unpack the latest release into *\_Steam Location\_/steamapps/common/GarrysMod/garrysmod/addons* folder. Yo will need to copy resources as well. Currently the only way to obtain them is to download addon from [workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=506283460) and extract it using gmad.
+- Download and unpack the [latest release](https://github.com/xDShot/csgo_knives_sweps/releases/latest) into `GarrysMod/garrysmod/addons` folder.
+
+or
+
+- Clone this repo `git clone https://github.com/xDShot/csgo_knives_sweps/`
 
 ## Server ConVars:
 Type these in console or in server config:
-- **csgo_knives_oldsounds** - Default is 0 - Play old sounds when swinging knife or hitting wall
-- **csgo_knives_backstabs** - Default is 1 - Allow backstabs
-- **csgo_knives_primary** - Default is 1 - Allow primary attacks
-- **csgo_knives_secondary** - Default is 1 - Allow secondary attacks
-- **csgo_knives_inspecting** - Default is 1 - Allow inspecting
 
-- **csgo_knives_dmg_sec_back** - Default is 180 - How much damage deal when hit with secondary attack from behind
-- **csgo_knives_dmg_sec_front** - Default is 65 - How much damage deal when hit with secondary attack in front or from side
-- **csgo_knives_dmg_prim_back** - Default is 90 - How much damage deal when hit with primary attack from behind
-- **csgo_knives_dmg_prim_front1** - Default is 40 - How much damage deal when hit with primary attack in front or from side (value randomly being picked between *\_front1* and *\_front2*)
-- **csgo_knives_dmg_prim_front2** - Default is 25 - How much damage deal when hit with primary attack in front or from side (value randomly being picked between *\_front1* and *\_front2*)
+| Variable name | Default value | Description |
+| --- | --- | --- |
+| **Bool variables** |||
+| csgo_knives_backstabs | 1 | Allow backstabs |
+| csgo_knives_force_ttt | 0 | Forces knives to enable TTT mode. For debug purposes. Normally you shouldn't enable it unless you haven't any trouble getting it work in ttt |
+| csgo_knives_inspecting | 1 | Allow inspecting |
+| csgo_knives_oldsounds | 0 | Play old sounds when swinging knife or hitting wall |
+| csgo_knives_primary | 1 | Allow primary attacks |
+| csgo_knives_secondary | 1 | Allow secondary attacks |
+| **Numerical variables** |||
+| csgo_knives_dmg_prim_back | 90 | How much damage deal when hit with primary attack from behind |
+| csgo_knives_dmg_prim_front1 | 40 | How much damage deal when hit with primary attack in front or from side (value randomly being picked between *\_front1* and *\_front2*) |
+| csgo_knives_dmg_prim_front2 | 25 | How much damage deal when hit with primary attack in front or from side (value randomly being picked between *\_front1* and *\_front2*) |
+| csgo_knives_dmg_sec_back | 180 | How much damage deal when hit with secondary attack from behind |
+| csgo_knives_dmg_sec_front | 65 | How much damage deal when hit with secondary attack in front or from side |
 
 ## Contributing:
 
