@@ -1,0 +1,15 @@
+# Text
+json	text
+lua	text
+md	text
+py	text
+txt	text
+vmt	text
+
+# Binary
+mdl	binary
+phy	binary
+vtf	binary
+vtx	binary
+vvd	binary
+wav	binary
