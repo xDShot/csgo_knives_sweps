@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\csgo_knife\knife_tactical_tiger"
+	
+	"$phongalbedotint" "1"
+	"$phongdisablehalflambert" "1"
+	"$phongexponenttexture" "models\csgo_knife\knife_tactical_ao"
+	"$phong" "1"
+	"$phongboost" "8"
+	"$phongfresnelranges" "[.2 0.5 1]"
+	"$phongalbedoboost" "100"
+
+	
+	 
+	"$basemapalphaphongmask" "1"
+}
+
+

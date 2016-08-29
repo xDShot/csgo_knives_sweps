@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	"$basetexture"	"models\csgo_knife\cssource"
+	"$envmap" 		"env_cubemap"
+	"$envmapmask" 	"models\csgo_knife\cssource_ref"
+}

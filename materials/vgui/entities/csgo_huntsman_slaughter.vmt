@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/entities/csgo_huntsman_slaughter"
+	"$vertexcolor" 1 
+	"$vertexalpha" 1 
+	"$nolod" 1 
+}

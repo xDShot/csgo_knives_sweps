@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+		"$baseTexture" "models\csgo_knife\karam_slaughter"
+	
+	"$phong" "1"
+	"$phongboost" "4"
+	"phongalbedoboost"		"50"
+	"phongexponent"		"4"
+	"$phongfresnelranges" "[.8 .8 1]"
+	"$phongexponenttexture" "models\csgo_knife\karam_ao"
+	
+	 
+	"$basemapalphaphongmask" "1"
+
+	"phongintensity"		"4"	
+	
+	"$phongdisablehalflambert" "1"
+}
+

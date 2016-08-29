@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\csgo_knife\knife_push_case"
+	
+	"$phong" "1"
+	"$phongboost" "20"
+	"$phongalbedo" 1
+	"$phongalbedoboost" "40"
+	"$phongfresnelranges" "[.8 .8 1]"
+	"$phongexponenttexture" "models\csgo_knife\knife_push_exponent"
+	
+	 
+	"$basemapalphaphongmask" "1"	
+	
+	"$phongdisablehalflambert" "1"
+}
+

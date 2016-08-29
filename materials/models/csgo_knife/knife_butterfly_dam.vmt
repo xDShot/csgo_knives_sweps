@@ -1,0 +1,20 @@
+
+"VertexLitGeneric"
+{
+		"$baseTexture" "models\csgo_knife\knife_butterfly_dam"
+	
+	"$phongalbedotint" "1"
+	"$phongdisablehalflambert" "1"
+		"$phongexponenttexture" "models\csgo_knife\knife_butterfly_ao"
+	"$phong" "1"
+	"$phongboost" "9"
+	"$phongfresnelranges" "[.3 0.5 1]"
+	"$phongalbedoboost" "60"
+	
+
+	
+	 
+	"$basemapalphaphongmask" "1"
+}
+
+
