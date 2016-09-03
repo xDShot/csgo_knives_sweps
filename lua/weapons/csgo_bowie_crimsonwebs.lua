@@ -1,47 +1,47 @@
 if not file.Exists( 'weapons/csgo_baseknife.lua', 'LUA' ) then
-	SWEP.Spawnable = false 
-	print('csgo_bowie_crimsonwebs failed to initialize: csgo_baseknife.lua not found. Did you install the main part?')
-	return 
+  SWEP.Spawnable = false 
+  print( 'csgo_bowie_crimsonwebs failed to initialize: csgo_baseknife.lua not found. Did you install the main part?' )
+  return 
 end
 
 local TTT = ( GAMEMODE_NAME == "terrortown" or cvars.Bool("csgo_knives_force_ttt", false) )
 
-DEFINE_BASECLASS('csgo_baseknife')
+DEFINE_BASECLASS( 'csgo_baseknife' )
 
 if ( SERVER ) then
-	SWEP.Weight         = 5
-	SWEP.AutoSwitchTo   = false
-	SWEP.AutoSwitchFrom = false
-	
-	if TTT then
-		SWEP.EquipMenuData = {
-			type = "item_weapon",
-			desc = "knife_desc"
-		}
-	end
+  SWEP.Weight         = 5
+  SWEP.AutoSwitchTo   = false
+  SWEP.AutoSwitchFrom = false
+
+  if TTT then
+    SWEP.EquipMenuData = {
+            type = "item_weapon",
+            desc = "knife_desc"
+        }
+  end
 end
 
 if ( CLIENT ) then
-	SWEP.PrintName		= 'Bowie knife | Crimson Web'
-	SWEP.Slot			= TTT and 6 or 2
-	SWEP.SlotPos		= 0
+  SWEP.PrintName    = 'Bowie knife | Crimson Web'
+  SWEP.Slot         = TTT and 6 or 2
+  SWEP.SlotPos      = 0
 end
 
-SWEP.Category			= 'CS:GO Knives'
+SWEP.Category       = 'CS:GO Knives'
 
-SWEP.Spawnable			= true
-SWEP.AdminSpawnable		= true
+SWEP.Spawnable      = true
+SWEP.AdminSpawnable = true
 
-SWEP.ViewModel			= 'models/weapons/v_csgo_bowie.mdl'
-SWEP.WorldModel			= 'models/weapons/w_csgo_bowie.mdl'
+SWEP.ViewModel      = 'models/weapons/v_csgo_bowie.mdl'
+SWEP.WorldModel     = 'models/weapons/w_csgo_bowie.mdl'
 
-SWEP.SkinIndex			= 9
-SWEP.AreDaggers			= false
+SWEP.SkinIndex      = 9
+SWEP.AreDaggers     = false
 
 util.PrecacheModel( SWEP.ViewModel )
 util.PrecacheModel( SWEP.WorldModel )
 
---- TTT config values
+-- TTT config values
 
 -- Kind specifies the category this weapon is in. Players can only carry one of
 -- each. Can be: WEAPON_... MELEE, PISTOL, HEAVY, NADE, CARRY, EQUIP1, EQUIP2 or ROLE.
