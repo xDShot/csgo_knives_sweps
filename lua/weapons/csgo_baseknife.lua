@@ -251,6 +251,8 @@ function SWEP:DoAttack( Altfire )
 
   Attacker:LagCompensation(false) -- Don't forget to disable it!
 
+  tr.HitGroup = HITGROUP_GENERIC -- Hack to disable damage scaling. No matter where we hit it, the damage should be as is.
+
   -- Calculate damage and deal hurt if we can
   local Backstab   = cvars.Bool("csgo_knives_backstabs", true) and DidHitPlrOrNPC and self:EntityFaceBack( HitEntity ) -- Because we can only backstab creatures
   local RMB_BACK   = cvars.Number("csgo_knives_dmg_sec_back", 180)
