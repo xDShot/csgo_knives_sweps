@@ -40,8 +40,8 @@ Type these in console or in server config:
 | csgo_knives_secondary | 1 | Allow secondary attacks |
 | **Numerical variables** |||
 | csgo_knives_dmg_prim_back | 90 | How much damage deal when hit with primary attack from behind |
-| csgo_knives_dmg_prim_front1 | 40 | How much damage deal when hit with primary attack in front or from side (value randomly being picked between *\_front1* and *\_front2*) |
-| csgo_knives_dmg_prim_front2 | 25 | How much damage deal when hit with primary attack in front or from side (value randomly being picked between *\_front1* and *\_front2*) |
+| csgo_knives_dmg_prim_front1 | 40 | How much damage deal when firstly hit with primary attack in front or from side |
+| csgo_knives_dmg_prim_front2 | 25 | How much damage deal when subsequently hit with primary attack in front or from side |
 | csgo_knives_dmg_sec_back | 180 | How much damage deal when hit with secondary attack from behind |
 | csgo_knives_dmg_sec_front | 65 | How much damage deal when hit with secondary attack in front or from side |
 

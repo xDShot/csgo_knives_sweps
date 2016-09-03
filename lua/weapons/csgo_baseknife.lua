@@ -20,8 +20,8 @@ if ( SERVER ) then
   CreateConVar("csgo_knives_dmg_sec_back", 180, FCVAR_ARCHIVE, "How much damage deal when hit with secondary attack from behind")
   CreateConVar("csgo_knives_dmg_sec_front", 65, FCVAR_ARCHIVE, "How much damage deal when hit with secondary attack in front or from side")
   CreateConVar("csgo_knives_dmg_prim_back", 90, FCVAR_ARCHIVE, "How much damage deal when hit with primary attack from behind")
-  CreateConVar("csgo_knives_dmg_prim_front1", 40, FCVAR_ARCHIVE, "How much damage deal when hit with primary attack in front or from side (value randomly being picked between *_front1 and *_front2)")
-  CreateConVar("csgo_knives_dmg_prim_front2", 25, FCVAR_ARCHIVE, "How much damage deal when hit with primary attack in front or from side (value randomly being picked between *_front1 and *_front2)")
+  CreateConVar("csgo_knives_dmg_prim_front1", 40, FCVAR_ARCHIVE, "How much damage deal when firstly hit with primary attack in front or from side")
+  CreateConVar("csgo_knives_dmg_prim_front2", 25, FCVAR_ARCHIVE, "How much damage deal when subsequently hit with primary attack in front or from side")
 end
 
 
@@ -249,7 +249,7 @@ function SWEP:DoAttack( Altfire )
   local HitEntity = IsValid(tr.Entity) and tr.Entity or Entity(0) -- Ugly hack to destroy glass surf. 0 is worldspawn.
   local DidHitPlrOrNPC = HitEntity and ( HitEntity:IsPlayer() or HitEntity:IsNPC() ) and IsValid( HitEntity )
 
-  Attacker:LagCompensation(false) -- Don't forget to disable it!
+  local FirstHit = not Altfire and ( ( self.Weapon:GetNextPrimaryFire() + 0.4 ) < CurTime() ) -- First swing does full damage, subsequent swings do less
 
   tr.HitGroup = HITGROUP_GENERIC -- Hack to disable damage scaling. No matter where we hit it, the damage should be as is.
 
@@ -261,7 +261,7 @@ function SWEP:DoAttack( Altfire )
   local LMB_FRONT1 = cvars.Number("csgo_knives_dmg_prim_front1", 40)
   local LMB_FRONT2 = cvars.Number("csgo_knives_dmg_prim_front2", 25)
 
-  local Damage = ( Altfire and ( Backstab and RMB_BACK or RMB_FRONT ) ) or ( Backstab and LMB_BACK ) or ( ( math.random(0,5) == 3 ) and LMB_FRONT1 ) or LMB_FRONT2 -- This is random it chooses between LMB_FRONT1 AND LMB_FRONT2
+  local Damage = ( Altfire and ( Backstab and RMB_BACK or RMB_FRONT ) ) or ( Backstab and LMB_BACK ) or ( FirstHit and LMB_FRONT1 ) or LMB_FRONT2
 
   local damageinfo = DamageInfo()
   damageinfo:SetAttacker( Attacker )
@@ -299,7 +299,8 @@ function SWEP:DoAttack( Altfire )
 
   local Snd = DidHitPlrOrNPC and ( Altfire and StabSnd or HitSnd ) or DidHit and HitwallSnd or SlashSnd
   Weapon:EmitSound( Snd )
-
+  
+  Attacker:LagCompensation(false) -- Don't forget to disable it!
 end
 
 
