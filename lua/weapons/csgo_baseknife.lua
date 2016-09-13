@@ -170,6 +170,7 @@ function SWEP:FindHullIntersection(VecSrc, tr, Mins, Maxs, pEntity)
   end
 
   local Distance	= 999999
+  local Distance = 999999
 
   for i = 0, 1 do
     for j = 0, 1 do
@@ -202,15 +203,19 @@ end
 
 
 function SWEP:PrimaryAttack()
-  if not cvars.Bool("csgo_knives_primary", true) or ( CurTime() < self.Weapon:GetNextPrimaryFire() ) then return end
-  self:DoAttack( false )
+  local prim = cvars.Bool("csgo_knives_primary", true)
+  local sec  = cvars.Bool("csgo_knives_secondary", true)
+  if not ( prim or sec ) or ( CurTime() < self.Weapon:GetNextPrimaryFire() ) then return end
+  self:DoAttack( not prim ) -- If we can do primary attack, do it. Otherwise - do secondary.
 end
 
 
 
 function SWEP:SecondaryAttack()
-  if not cvars.Bool("csgo_knives_secondary", true) or ( CurTime() < self.Weapon:GetNextSecondaryFire() ) then return end
-  self:DoAttack( true )
+  local prim = cvars.Bool("csgo_knives_primary", true)
+  local sec  = cvars.Bool("csgo_knives_secondary", true)
+  if not ( prim or sec ) or ( CurTime() < self.Weapon:GetNextSecondaryFire() ) then return end
+  self:DoAttack( sec ) -- If we can do secondary attack, do it. Otherwise - do primary.
 end
 
 
