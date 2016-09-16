@@ -173,7 +173,6 @@ function SWEP:FindHullIntersection(VecSrc, tr, Mins, Maxs, pEntity)
     return tr
   end
 
-  local Distance	= 999999
   local Distance = 999999
 
   for i = 0, 1 do
@@ -279,9 +278,19 @@ function SWEP:DoAttack( Altfire )
   damageinfo:SetDamageType( bit.bor( DMG_BULLET , DMG_NEVERGIB ) )
   damageinfo:SetDamageForce( Forward * 1000 )
   damageinfo:SetDamagePosition( AttackEnd )
+
   HitEntity:DispatchTraceAttack( damageinfo, tr, Forward )
 
-  if tr.HitWorld then util.Decal("ManhackCut", tr.HitPos + tr.HitNormal, tr.HitPos - tr.HitNormal) end
+  if tr.HitWorld then --and ( game.SinglePlayer() or CLIENT ) 
+
+    util.Decal( "ManhackCut", AttackSrc - Forward, AttackEnd + Forward )
+
+    local effectdata = EffectData()
+    effectdata:SetOrigin( tr.HitPos + tr.HitNormal )
+    effectdata:SetNormal( tr.HitNormal )
+    util.Effect( "csgo_knifeimpact", effectdata )
+
+  end
 
   -- Change next attack time
   local NextAttack = Altfire and 1.0 or DidHit and 0.5 or 0.4
