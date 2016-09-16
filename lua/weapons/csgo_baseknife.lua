@@ -327,4 +327,20 @@ function SWEP:Reload()
   self:SetInspectTime( CurTime() + 0.1 )
 end
 
+
+
+function SWEP:Holster( wep )
+  return true
+end
+
+
+
+function SWEP:OnRemove()
+end
+
+
+
+function SWEP:OwnerChanged()
+end
+
 --YOU'RE WINNER!
