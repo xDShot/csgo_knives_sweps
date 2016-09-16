@@ -27,7 +27,8 @@ end
 
 
 if ( CLIENT ) then
-  --CreateClientConVar( "csgo_knives_cl_lefthanded", "0", true, false, "Flip knives viewmodel and hold knives on left hand" ) -- ToDo
+
+  CreateClientConVar( "cl_csgo_knives_lefthanded", "0", true, false, "Flip knives viewmodel and hold knives on left hand" )
 
   SWEP.PrintName        = "CS:GO baseknife"
   SWEP.Slot             = TTT and 6 or 2
@@ -38,7 +39,8 @@ if ( CLIENT ) then
   SWEP.ViewModelFlip    = false
   SWEP.CSMuzzleFlashes  = true
   SWEP.UseHands         = true
-  SWEP.ViewModelFlip    = false -- cvars.Bool("csgo_knives_cl_lefthanded", false) -- ToDo
+  SWEP.ViewModelFlip    = cvars.Bool("cl_csgo_knives_lefthanded", false) -- ToDo
+  
 end
 
 SWEP.Category              = "CS:GO Knives"
@@ -121,6 +123,7 @@ end
 
 
 function SWEP:Think()
+  self.ViewModelFlip = cvars.Bool("cl_csgo_knives_lefthanded", false)
   self.Owner:GetViewModel():SetSkin( self.SkinIndex or 0 )
   if CurTime()>=self:GetIdleTime() then
     self.Weapon:SendWeaponAnim( ACT_VM_IDLE )
@@ -136,6 +139,7 @@ function SWEP:Deploy()
   self.Weapon:SendWeaponAnim( ACT_VM_DRAW )
   self.Weapon:SetNextPrimaryFire( CurTime() + 1 )
   self.Weapon:SetNextSecondaryFire( CurTime() + 1 )
+  return true
 end
 
 
