@@ -271,12 +271,15 @@ function SWEP:DoAttack( Altfire )
 
   local Damage = ( Altfire and ( Backstab and RMB_BACK or RMB_FRONT ) ) or ( Backstab and LMB_BACK ) or ( FirstHit and LMB_FRONT1 ) or LMB_FRONT2
 
+  local Force = Forward:GetNormalized() * 300 * cvars.Number("phys_pushscale", 1) -- simplified result of CalculateMeleeDamageForce()
+
   local damageinfo = DamageInfo()
+ 
   damageinfo:SetAttacker( Attacker )
   damageinfo:SetInflictor( self )
   damageinfo:SetDamage( Damage )
   damageinfo:SetDamageType( bit.bor( DMG_BULLET , DMG_NEVERGIB ) )
-  damageinfo:SetDamageForce( Forward * 1000 )
+  damageinfo:SetDamageForce( Force )
   damageinfo:SetDamagePosition( AttackEnd )
 
   HitEntity:DispatchTraceAttack( damageinfo, tr, Forward )
