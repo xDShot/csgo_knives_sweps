@@ -290,7 +290,13 @@ function SWEP:DoAttack( Altfire )
 
     local effectdata = EffectData()
     effectdata:SetOrigin( tr.HitPos + tr.HitNormal )
+    effectdata:SetStart( tr.StartPos )
+    effectdata:SetSurfaceProp( tr.SurfaceProps )
+    effectdata:SetDamageType( DMG_SLASH )
+    effectdata:SetHitBox( tr.HitBox )
     effectdata:SetNormal( tr.HitNormal )
+    effectdata:SetEntity( tr.Entity )
+    effectdata:SetAngles( Forward:Angle() )
     util.Effect( "csgo_knifeimpact", effectdata )
 
   end
