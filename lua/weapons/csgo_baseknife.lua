@@ -16,6 +16,8 @@ if ( SERVER ) then
   CreateConVar("csgo_knives_secondary", 1, FCVAR_ARCHIVE, "Allow secondary attacks")
   CreateConVar("csgo_knives_inspecting", 1, FCVAR_ARCHIVE, "Allow inspecting")
   CreateConVar("csgo_knives_force_ttt", 0, FCVAR_ARCHIVE, "Forces knives to enable TTT mode. For debug purposes. Normally you shouldn't enable it unless you haven't any trouble getting it work in ttt")
+  CreateConVar("csgo_knives_decals", 1, FCVAR_ARCHIVE, "Paint wall decals when hit wall" )
+  CreateConVar("csgo_knives_hiteffect", 1, FCVAR_ARCHIVE, "Draw effect when hit wall" )
 
   CreateConVar("csgo_knives_dmg_sec_back", 180, FCVAR_ARCHIVE, "How much damage deal when hit with secondary attack from behind")
   CreateConVar("csgo_knives_dmg_sec_front", 65, FCVAR_ARCHIVE, "How much damage deal when hit with secondary attack in front or from side")
@@ -286,19 +288,20 @@ function SWEP:DoAttack( Altfire )
 
   if tr.HitWorld then --and ( game.SinglePlayer() or CLIENT ) 
 
-    util.Decal( "ManhackCut", AttackSrc - Forward, AttackEnd + Forward )
+    if cvars.Bool("csgo_knives_decals", true) then util.Decal( "ManhackCut", AttackSrc - Forward, AttackEnd + Forward, true ) end
 
-    local effectdata = EffectData()
-    effectdata:SetOrigin( tr.HitPos + tr.HitNormal )
-    effectdata:SetStart( tr.StartPos )
-    effectdata:SetSurfaceProp( tr.SurfaceProps )
-    effectdata:SetDamageType( DMG_SLASH )
-    effectdata:SetHitBox( tr.HitBox )
-    effectdata:SetNormal( tr.HitNormal )
-    effectdata:SetEntity( tr.Entity )
-    effectdata:SetAngles( Forward:Angle() )
-    util.Effect( "csgo_knifeimpact", effectdata )
-
+    if cvars.Bool("csgo_knives_hiteffect", true) then
+      local effectdata = EffectData()
+      effectdata:SetOrigin( tr.HitPos + tr.HitNormal )
+      effectdata:SetStart( tr.StartPos )
+      effectdata:SetSurfaceProp( tr.SurfaceProps )
+      effectdata:SetDamageType( DMG_SLASH )
+      effectdata:SetHitBox( tr.HitBox )
+      effectdata:SetNormal( tr.HitNormal )
+      effectdata:SetEntity( tr.Entity )
+      effectdata:SetAngles( Forward:Angle() )
+      util.Effect( "csgo_knifeimpact", effectdata )
+    end
   end
 
   -- Change next attack time
