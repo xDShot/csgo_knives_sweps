@@ -32,8 +32,11 @@ Type these in console or in server config:
 | Variable name | Default value | Description |
 | --- | --- | --- |
 | **Bool variables** |||
+| cl_csgo_knives_lefthanded | 0 | _(Clientside)_ Flip knives viewmodel and hold knives on left hand |
 | csgo_knives_backstabs | 1 | Allow backstabs |
+| csgo_knives_decals | 1 | Paint wall decals when hit wall |
 | csgo_knives_force_ttt | 0 | Forces knives to enable TTT mode. For debug purposes. Normally you shouldn't enable it unless you haven't any trouble getting it work in ttt |
+| csgo_knives_hiteffect | 1 | Draw effect when hit wall |
 | csgo_knives_inspecting | 1 | Allow inspecting |
 | csgo_knives_oldsounds | 0 | Play old sounds when swinging knife or hitting wall |
 | csgo_knives_primary | 1 | Allow primary attacks |
