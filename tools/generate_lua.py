@@ -5,6 +5,8 @@ import io
 import argparse
 import ast
 
+Q = "'"
+
 parser = argparse.ArgumentParser(description='Automatically generate lua files using template and list of knives. Don\'t waste time on editing each lua, do it at once!')
 parser.add_argument('-wt', default='weapon_template.lua', help='weapon template file')
 parser.add_argument('-wd', default='../lua/weapons/', help='where to save weapons lua files')
@@ -44,7 +46,7 @@ for line in List_file:
     Skin_index  = column[4]
     Are_daggers = column[5] > 0 and 'true' or 'false'
     
-    Print_name = Knife_name + (Skin_name != 'noskin' and (' | ' + Skin_name) or '')
+    Print_name = Skin_name == 'noskin' and ( Q + Knife_name + Q ) or ( Q + Knife_name + Q + ' .. ' +  Q +' | ' + Q + ' .. ' + Q + Skin_name + Q)
     
     Equip_Menu = '''{
             type = "item_weapon",

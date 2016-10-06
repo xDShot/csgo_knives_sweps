@@ -1,4 +1,4 @@
-ITEM.Name = '{printname}'
+ITEM.Name = {printname}
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_{modelname}.mdl'
 ITEM.Skin = {skinindex}
