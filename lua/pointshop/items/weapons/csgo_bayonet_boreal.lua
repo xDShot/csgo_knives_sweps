@@ -1,4 +1,4 @@
-ITEM.Name = 'Bayonet Knife | Boreal Forest'
+ITEM.Name = 'Bayonet Knife' .. ' | ' .. 'Boreal Forest'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_bayonet.mdl'
 ITEM.Skin = 1

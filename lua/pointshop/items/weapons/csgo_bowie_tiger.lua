@@ -1,4 +1,4 @@
-ITEM.Name = 'Bowie knife | Tiger Tooth'
+ITEM.Name = 'Bowie knife' .. ' | ' .. 'Tiger Tooth'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_bowie.mdl'
 ITEM.Skin = 7

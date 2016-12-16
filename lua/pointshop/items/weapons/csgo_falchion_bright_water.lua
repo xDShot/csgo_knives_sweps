@@ -1,4 +1,4 @@
-ITEM.Name = 'Falchion Knife | Bright Water'
+ITEM.Name = 'Falchion Knife' .. ' | ' .. 'Bright Water'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_falchion.mdl'
 ITEM.Skin = 16

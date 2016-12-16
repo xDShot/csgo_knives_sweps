@@ -1,4 +1,4 @@
-ITEM.Name = 'Karambit Knife | Bright Water'
+ITEM.Name = 'Karambit Knife' .. ' | ' .. 'Bright Water'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_karambit.mdl'
 ITEM.Skin = 16

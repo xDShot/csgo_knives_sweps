@@ -1,4 +1,4 @@
-ITEM.Name = 'Bayonet Knife | Freehand'
+ITEM.Name = 'Bayonet Knife' .. ' | ' .. 'Freehand'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_bayonet.mdl'
 ITEM.Skin = 17

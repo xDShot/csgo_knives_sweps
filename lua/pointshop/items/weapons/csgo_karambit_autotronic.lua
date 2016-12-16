@@ -1,4 +1,4 @@
-ITEM.Name = 'Karambit Knife | Autotronic'
+ITEM.Name = 'Karambit Knife' .. ' | ' .. 'Autotronic'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_karambit.mdl'
 ITEM.Skin = 14

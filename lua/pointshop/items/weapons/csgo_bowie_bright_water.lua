@@ -1,4 +1,4 @@
-ITEM.Name = 'Bowie knife | Bright Water'
+ITEM.Name = 'Bowie knife' .. ' | ' .. 'Bright Water'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_bowie.mdl'
 ITEM.Skin = 16

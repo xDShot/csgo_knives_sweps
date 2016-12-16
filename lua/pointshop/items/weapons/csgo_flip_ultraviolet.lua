@@ -1,4 +1,4 @@
-ITEM.Name = 'Flip Knife | Ultraviolet'
+ITEM.Name = 'Flip Knife' .. ' | ' .. 'Ultraviolet'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_flip.mdl'
 ITEM.Skin = 10

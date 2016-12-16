@@ -1,4 +1,4 @@
-ITEM.Name = 'Shadow Daggers | Greyscaled'
+ITEM.Name = 'Shadow Daggers' .. ' | ' .. 'Greyscaled'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_push.mdl'
 ITEM.Skin = 6

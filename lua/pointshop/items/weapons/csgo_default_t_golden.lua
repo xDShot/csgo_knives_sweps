@@ -1,4 +1,4 @@
-ITEM.Name = 'Default T Knife | Golden'
+ITEM.Name = 'Default T Knife' .. ' | ' .. 'Golden'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_default_t.mdl'
 ITEM.Skin = 1

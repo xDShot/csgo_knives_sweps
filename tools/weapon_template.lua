@@ -54,7 +54,7 @@ SWEP.AutoSpawnable = false
 
 -- CanBuy is a table of ROLE_* entries like ROLE_TRAITOR and ROLE_DETECTIVE. If
 -- a role is in this table, those players can buy this.
-SWEP.CanBuy = {canbuy}
+SWEP.CanBuy = cvars.Bool("csgo_knives_canbuy", true) and {canbuy} or nil
 
 -- InLoadoutFor is a table of ROLE_* entries that specifies which roles should
 -- receive this weapon as soon as the round starts. In this case, none.

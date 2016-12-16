@@ -1,4 +1,4 @@
-ITEM.Name = 'Flip Knife | Damascus Steel'
+ITEM.Name = 'Flip Knife' .. ' | ' .. 'Damascus Steel'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_flip.mdl'
 ITEM.Skin = 4

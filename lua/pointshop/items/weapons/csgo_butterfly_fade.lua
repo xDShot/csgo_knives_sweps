@@ -1,4 +1,4 @@
-ITEM.Name = 'Butterfly Knife | Fade'
+ITEM.Name = 'Butterfly Knife' .. ' | ' .. 'Fade'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_butterfly.mdl'
 ITEM.Skin = 6

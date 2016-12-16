@@ -1,4 +1,4 @@
-ITEM.Name = 'Gut Knife | Tiger Tooth'
+ITEM.Name = 'Gut Knife' .. ' | ' .. 'Tiger Tooth'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_gut.mdl'
 ITEM.Skin = 9

@@ -22,7 +22,7 @@ if ( SERVER ) then
 end
 
 if ( CLIENT ) then
-  SWEP.PrintName    = 'M9 Bayonet Knife | Bright Water'
+  SWEP.PrintName    = 'M9 Bayonet Knife' .. ' | ' .. 'Bright Water'
   SWEP.Slot         = TTT and 6 or 2
   SWEP.SlotPos      = 0
 end
@@ -57,7 +57,7 @@ SWEP.AutoSpawnable = false
 
 -- CanBuy is a table of ROLE_* entries like ROLE_TRAITOR and ROLE_DETECTIVE. If
 -- a role is in this table, those players can buy this.
-SWEP.CanBuy = { ROLE_TRAITOR }
+SWEP.CanBuy = cvars.Bool("csgo_knives_canbuy", true) and { ROLE_TRAITOR } or nil
 
 -- InLoadoutFor is a table of ROLE_* entries that specifies which roles should
 -- receive this weapon as soon as the round starts. In this case, none.

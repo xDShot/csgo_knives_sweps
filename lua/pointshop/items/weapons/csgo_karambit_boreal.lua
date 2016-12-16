@@ -1,4 +1,4 @@
-ITEM.Name = 'Karambit Knife | Boreal Forest'
+ITEM.Name = 'Karambit Knife' .. ' | ' .. 'Boreal Forest'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_karambit.mdl'
 ITEM.Skin = 1

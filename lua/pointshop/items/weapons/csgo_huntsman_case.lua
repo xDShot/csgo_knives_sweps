@@ -1,4 +1,4 @@
-ITEM.Name = 'Huntsman Knife | Case Hardened'
+ITEM.Name = 'Huntsman Knife' .. ' | ' .. 'Case Hardened'
 ITEM.Price = 20000
 ITEM.Model = 'models/weapons/w_csgo_tactical.mdl'
 ITEM.Skin = 2
