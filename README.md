@@ -34,6 +34,7 @@ Type these in console or in server config:
 | **Bool variables** |||
 | cl_csgo_knives_lefthanded | 0 | _(Clientside)_ Flip knives viewmodel and hold knives on left hand |
 | csgo_knives_backstabs | 1 | Allow backstabs |
+| csgo_knives_canbuy | 1 | Allow buying knives from traitor shop in TTT. May require server restarting if changing |
 | csgo_knives_decals | 1 | Paint wall decals when hit wall |
 | csgo_knives_force_ttt | 0 | Forces knives to enable TTT mode. For debug purposes. Normally you shouldn't enable it unless you haven't any trouble getting it work in ttt |
 | csgo_knives_hiteffect | 1 | Draw effect when hit wall |
