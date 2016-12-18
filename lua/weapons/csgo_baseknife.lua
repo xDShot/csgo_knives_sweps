@@ -125,6 +125,25 @@ end
 
 
 
+-- PaintMaterial
+function SWEP:DrawWorldModel()
+  if self.PaintMaterial then
+    self:SetMaterial( self.PaintMaterial or "" )
+  end
+  self:DrawModel()
+end
+
+
+
+local function FuncPaintMaterial( vm, ply, weapon )
+  if not ( IsValid( vm ) and IsValid( weapon ) ) then return end
+
+  vm:SetMaterial( weapon.PaintMaterial or "" )
+end
+
+hook.Add( "PreDrawViewModel", "HookPaintMaterial", FuncPaintMaterial )
+
+
 function SWEP:Think()
   self.ViewModelFlip = cvars.Bool("cl_csgo_knives_lefthanded", false)
   self.Owner:GetViewModel():SetSkin( self.SkinIndex or 0 )
