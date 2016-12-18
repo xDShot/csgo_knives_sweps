@@ -22,11 +22,11 @@ if ( SERVER ) then
 end
 
 if ( CLIENT ) then
-  SWEP.PrintName    = 'Butterfly Knife' .. ' | ' .. 'Crimson Webs'
   SWEP.Slot         = TTT and 6 or 2
   SWEP.SlotPos      = 0
 end
 
+SWEP.PrintName      = 'Butterfly Knife' .. ' | ' .. 'Crimson Webs'
 SWEP.Category       = 'CS:GO Knives'
 
 SWEP.Spawnable      = true
