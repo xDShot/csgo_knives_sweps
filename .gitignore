@@ -2,3 +2,5 @@
 
 *.patch
 .vscode/*
+
+*csgo_test*
