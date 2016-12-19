@@ -42,6 +42,7 @@ Type these in console or in server config:
 | csgo_knives_oldsounds | 0 | Play old sounds when swinging knife or hitting wall |
 | csgo_knives_primary | 1 | Allow primary attacks |
 | csgo_knives_secondary | 1 | Allow secondary attacks |
+| csgo_knives_tfaskins | 1 | Add skins for [TFA knives](https://steamcommunity.com/sharedfiles/filedetails/?id=542024374) using this pack's base if any of them installed |
 | **Numerical variables** |||
 | csgo_knives_dmg_prim_back | 90 | How much damage deal when hit with primary attack from behind |
 | csgo_knives_dmg_prim_front1 | 40 | How much damage deal when firstly hit with primary attack in front or from side |
