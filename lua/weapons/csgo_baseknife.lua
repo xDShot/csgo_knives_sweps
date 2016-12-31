@@ -119,7 +119,6 @@ end
 
 
 function SWEP:Initialize()
-  self:SetSkin( self.SkinIndex or 0 ) -- Sets worldmodel skin
   self:SetHoldType( self.AreDaggers and "fist" or "knife" ) -- Avoid using SetWeaponHoldType! Otherwise the players could hold it wrong!
 end
 
@@ -128,7 +127,9 @@ end
 -- PaintMaterial
 function SWEP:DrawWorldModel()
   if self.PaintMaterial then
-    self:SetMaterial( self.PaintMaterial or "" )
+    self:SetMaterial( self.PaintMaterial or nil )
+  else
+    self:SetSkin( self.SkinIndex or self:GetSkin() or 0 )
   end
   self:DrawModel()
 end
@@ -136,17 +137,35 @@ end
 
 
 local function FuncPaintMaterial( vm, ply, weapon )
-  if not ( IsValid( vm ) and IsValid( weapon ) ) then return end
+  if not ( IsValid( vm ) and IsValid( weapon ) ) then 
+--    print( "HookPaintMaterial FAIL" )
+    return 
+  end
+  
+--  print( "HookPaintMaterial", "vm", vm, vm:GetModel(), "\n",
+--  "ply", ply, ply:GetModel(), "\n",
+--  "weapon", weapon, weapon:GetModel(), "\n",
+--  "weapon.PaintMaterial", weapon.PaintMaterial, "\n",
+--  "weapon.SkinIndex", weapon.SkinIndex )
 
-  vm:SetMaterial( weapon.PaintMaterial or "" )
+  if weapon.PaintMaterial then
+    vm:SetMaterial( weapon.PaintMaterial or nil )
+    vm:SetSkin( 0 )
+  elseif weapon.SkinIndex then
+    vm:SetMaterial( nil )
+    vm:SetSkin( weapon.SkinIndex or vm:GetSkin() or 0 )
+  else
+    vm:SetMaterial( vm:GetMaterial() or nil )
+    vm:SetSkin( vm:GetSkin() or 0 )
+  end
 end
 
 hook.Add( "PreDrawViewModel", "HookPaintMaterial", FuncPaintMaterial )
 
 
+
 function SWEP:Think()
   self.ViewModelFlip = cvars.Bool("cl_csgo_knives_lefthanded", false)
-  self.Owner:GetViewModel():SetSkin( self.SkinIndex or 0 )
   if CurTime()>=self:GetIdleTime() then
     self.Weapon:SendWeaponAnim( ACT_VM_IDLE )
     self:SetIdleTime( CurTime() + self.Owner:GetViewModel():SequenceDuration() )
