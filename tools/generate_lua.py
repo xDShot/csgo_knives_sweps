@@ -50,10 +50,7 @@ for line in List_file:
     
     Print_name = Skin_name == 'noskin' and ( Q + Knife_name + Q ) or ( Q + Knife_name + Q + ' .. ' +  Q +' | ' + Q + ' .. ' + Q + Skin_name + Q)
     
-    Equip_Menu = '''{
-            type = "item_weapon",
-            desc = "knife_desc"
-        }'''
+    Equip_Menu = '''{ type = "item_weapon", desc = "knife_desc" }'''
     Can_buy = "{ ROLE_TRAITOR }"
     
     Format = {'basename':Base_name,
