@@ -36,6 +36,7 @@ SWEP.ViewModel      = 'models/weapons/v_csgo_bayonet.mdl'
 SWEP.WorldModel     = 'models/weapons/w_csgo_bayonet.mdl'
 
 SWEP.SkinIndex      = 10
+SWEP.PaintMaterial  = nil
 SWEP.AreDaggers     = false
 
 util.PrecacheModel( SWEP.ViewModel )

@@ -36,6 +36,7 @@ SWEP.ViewModel      = 'models/weapons/v_csgo_flip.mdl'
 SWEP.WorldModel     = 'models/weapons/w_csgo_flip.mdl'
 
 SWEP.SkinIndex      = 2
+SWEP.PaintMaterial  = nil
 SWEP.AreDaggers     = false
 
 util.PrecacheModel( SWEP.ViewModel )

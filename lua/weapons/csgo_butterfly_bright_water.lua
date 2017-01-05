@@ -36,6 +36,7 @@ SWEP.ViewModel      = 'models/weapons/v_csgo_butterfly.mdl'
 SWEP.WorldModel     = 'models/weapons/w_csgo_butterfly.mdl'
 
 SWEP.SkinIndex      = 16
+SWEP.PaintMaterial  = nil
 SWEP.AreDaggers     = false
 
 util.PrecacheModel( SWEP.ViewModel )
