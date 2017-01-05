@@ -14,7 +14,7 @@ if ( SERVER ) then
   SWEP.AutoSwitchFrom = false
 
   if TTT then
-    SWEP.EquipMenuData = cvars.Bool("csgo_knives_canbuy", true) and { type = "item_weapon", desc = "knife_desc" } of nil
+    SWEP.EquipMenuData = cvars.Bool("csgo_knives_canbuy", true) and { type = "item_weapon", desc = "knife_desc" } or nil
   end
 end
 
