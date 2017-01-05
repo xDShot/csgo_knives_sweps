@@ -45,6 +45,8 @@ for line in List_file:
     Skin_name   = column[3]
     Skin_index  = column[4]
     Are_daggers = column[5] > 0 and 'true' or 'false'
+    Paint_material = column[6]
+    Paint_material = ( Paint_material == "nomaterial" ) and 'nil' or Q + Paint_material + Q
     
     Print_name = Skin_name == 'noskin' and ( Q + Knife_name + Q ) or ( Q + Knife_name + Q + ' .. ' +  Q +' | ' + Q + ' .. ' + Q + Skin_name + Q)
     
@@ -61,7 +63,8 @@ for line in List_file:
               'printname':Print_name,
               'aredaggers':Are_daggers,
               'equipmenu':Equip_Menu,
-              'canbuy':Can_buy}
+              'canbuy':Can_buy,
+              'paintmaterial':Paint_material}
     
     output_text = Weapon_text.format(**Format)
     # print(output_text)

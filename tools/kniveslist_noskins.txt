@@ -1,18 +1,18 @@
 # Empty lines and lines starting from hashtag are ignored.
 
-# Lua_name, Model_name, Knife_name, Skin_name, Skin_index, Are_daggers
+# Lua_name, Model_name, Knife_name, Skin_name, Skin_index, Are_daggers, Paint_material
 
 # No skins
-"csgo_bayonet", "csgo_bayonet", "Bayonet Knife", "noskin", 0, 0
-"csgo_bowie", "csgo_bowie", "Bowie knife", "noskin", 0, 0
-"csgo_butterfly", "csgo_butterfly", "Butterfly Knife", "noskin", 0, 0
-"csgo_cssource", "csgo_cssource", "CS:Source Knife", "noskin", 0, 0
-"csgo_daggers", "csgo_push", "Shadow Daggers", "noskin", 0, 1
-"csgo_default_knife", "csgo_default", "Default CT Knife", "noskin", 0, 0
-"csgo_default_t", "csgo_default_t", "Default T Knife", "noskin", 0, 0
-"csgo_falchion", "csgo_falchion", "Falchion Knife", "noskin", 0, 0
-"csgo_flip", "csgo_flip", "Flip Knife", "noskin", 0, 0
-"csgo_gut", "csgo_gut", "Gut Knife", "noskin", 0, 0
-"csgo_huntsman", "csgo_tactical", "Huntsman Knife", "noskin", 0, 0
-"csgo_karambit", "csgo_karambit", "Karambit Knife", "noskin", 0, 0
-"csgo_m9", "csgo_m9", "M9 Bayonet Knife", "noskin", 0, 0
+"csgo_bayonet", "csgo_bayonet", "Bayonet Knife", "noskin", 0, 0, "nomaterial"
+"csgo_bowie", "csgo_bowie", "Bowie knife", "noskin", 0, 0, "nomaterial"
+"csgo_butterfly", "csgo_butterfly", "Butterfly Knife", "noskin", 0, 0, "nomaterial"
+"csgo_cssource", "csgo_cssource", "CS:Source Knife", "noskin", 0, 0, "nomaterial"
+"csgo_daggers", "csgo_push", "Shadow Daggers", "noskin", 0, 1, "nomaterial"
+"csgo_default_knife", "csgo_default", "Default CT Knife", "noskin", 0, 0, "nomaterial"
+"csgo_default_t", "csgo_default_t", "Default T Knife", "noskin", 0, 0, "nomaterial"
+"csgo_falchion", "csgo_falchion", "Falchion Knife", "noskin", 0, 0, "nomaterial"
+"csgo_flip", "csgo_flip", "Flip Knife", "noskin", 0, 0, "nomaterial"
+"csgo_gut", "csgo_gut", "Gut Knife", "noskin", 0, 0, "nomaterial"
+"csgo_huntsman", "csgo_tactical", "Huntsman Knife", "noskin", 0, 0, "nomaterial"
+"csgo_karambit", "csgo_karambit", "Karambit Knife", "noskin", 0, 0, "nomaterial"
+"csgo_m9", "csgo_m9", "M9 Bayonet Knife", "noskin", 0, 0, "nomaterial"

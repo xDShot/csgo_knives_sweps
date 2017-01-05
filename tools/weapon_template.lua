@@ -33,6 +33,7 @@ SWEP.ViewModel      = 'models/weapons/v_{modelname}.mdl'
 SWEP.WorldModel     = 'models/weapons/w_{modelname}.mdl'
 
 SWEP.SkinIndex      = {skinindex}
+SWEP.PaintMaterial  = {paintmaterial}
 SWEP.AreDaggers     = {aredaggers}
 
 util.PrecacheModel( SWEP.ViewModel )

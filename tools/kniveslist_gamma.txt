@@ -1,68 +1,68 @@
 # Empty lines and lines starting from hashtag are ignored.
 
-# Lua_name, Model_name, Knife_name, Skin_name, Skin_index, Are_daggers
+# Lua_name, Model_name, Knife_name, Skin_name, Skin_index, Are_daggers, Paint_material
 
 # Bayonet
-"csgo_bayonet_autotronic", "csgo_bayonet", "Bayonet Knife", "Autotronic", 14, 0
-"csgo_bayonet_black_laminate", "csgo_bayonet", "Bayonet Knife", "Black Laminate", 15, 0
-"csgo_bayonet_bright_water", "csgo_bayonet", "Bayonet Knife", "Bright Water", 16, 0
-"csgo_bayonet_freehand", "csgo_bayonet", "Bayonet Knife", "Freehand", 17, 0
-"csgo_bayonet_gamma_doppler", "csgo_bayonet", "Bayonet Knife", "Gamma Doppler", 18, 0
-"csgo_bayonet_lore", "csgo_bayonet", "Bayonet Knife", "Lore", 19, 0
+"csgo_bayonet_autotronic", "csgo_bayonet", "Bayonet Knife", "Autotronic", 14, 0, "nomaterial" 
+"csgo_bayonet_black_laminate", "csgo_bayonet", "Bayonet Knife", "Black Laminate", 15, 0, "nomaterial" 
+"csgo_bayonet_bright_water", "csgo_bayonet", "Bayonet Knife", "Bright Water", 16, 0, "nomaterial" 
+"csgo_bayonet_freehand", "csgo_bayonet", "Bayonet Knife", "Freehand", 17, 0, "nomaterial" 
+"csgo_bayonet_gamma_doppler", "csgo_bayonet", "Bayonet Knife", "Gamma Doppler", 18, 0, "nomaterial" 
+"csgo_bayonet_lore", "csgo_bayonet", "Bayonet Knife", "Lore", 19, 0, "nomaterial" 
 
 # Bowie
-"csgo_bowie_bright_water", "csgo_bowie", "Bowie knife", "Bright Water", 16, 0
-"csgo_bowie_freehand", "csgo_bowie", "Bowie knife", "Freehand", 17, 0
-"csgo_bowie_gamma_doppler", "csgo_bowie", "Bowie knife", "Gamma Doppler", 18, 0
+"csgo_bowie_bright_water", "csgo_bowie", "Bowie knife", "Bright Water", 16, 0, "nomaterial" 
+"csgo_bowie_freehand", "csgo_bowie", "Bowie knife", "Freehand", 17, 0, "nomaterial" 
+"csgo_bowie_gamma_doppler", "csgo_bowie", "Bowie knife", "Gamma Doppler", 18, 0, "nomaterial" 
 
 # Butterfly
-"csgo_butterfly_bright_water", "csgo_butterfly", "Butterfly Knife", "Bright Water", 16, 0
-"csgo_butterfly_freehand", "csgo_butterfly", "Butterfly Knife", "Freehand", 17, 0
-"csgo_butterfly_gamma_doppler", "csgo_butterfly", "Butterfly Knife", "Gamma Doppler", 18, 0
+"csgo_butterfly_bright_water", "csgo_butterfly", "Butterfly Knife", "Bright Water", 16, 0, "nomaterial" 
+"csgo_butterfly_freehand", "csgo_butterfly", "Butterfly Knife", "Freehand", 17, 0, "nomaterial" 
+"csgo_butterfly_gamma_doppler", "csgo_butterfly", "Butterfly Knife", "Gamma Doppler", 18, 0, "nomaterial" 
 
 # Shadow Daggers
-"csgo_daggers_bright_water", "csgo_push", "Shadow Daggers", "Bright Water", 17, 0
-"csgo_daggers_freehand", "csgo_push", "Shadow Daggers", "Freehand", 18, 0
-"csgo_daggers_gamma_doppler", "csgo_push", "Shadow Daggers", "Gamma Doppler", 19, 0
+"csgo_daggers_bright_water", "csgo_push", "Shadow Daggers", "Bright Water", 17, 0, "nomaterial" 
+"csgo_daggers_freehand", "csgo_push", "Shadow Daggers", "Freehand", 18, 0, "nomaterial" 
+"csgo_daggers_gamma_doppler", "csgo_push", "Shadow Daggers", "Gamma Doppler", 19, 0, "nomaterial" 
 
 # Falchion
-"csgo_falchion_bright_water", "csgo_falchion", "Falchion Knife", "Bright Water", 16, 0
-"csgo_falchion_freehand", "csgo_falchion", "Falchion Knife", "Freehand", 17, 0
-"csgo_falchion_gamma_doppler", "csgo_falchion", "Falchion Knife", "Gamma Doppler", 18, 0
+"csgo_falchion_bright_water", "csgo_falchion", "Falchion Knife", "Bright Water", 16, 0, "nomaterial" 
+"csgo_falchion_freehand", "csgo_falchion", "Falchion Knife", "Freehand", 17, 0, "nomaterial" 
+"csgo_falchion_gamma_doppler", "csgo_falchion", "Falchion Knife", "Gamma Doppler", 18, 0, "nomaterial" 
 
 # Flip
-"csgo_flip_autotronic", "csgo_flip", "Flip Knife", "Autotronic", 14, 0
-"csgo_flip_black_laminate", "csgo_flip", "Flip Knife", "Black Laminate", 15, 0
-"csgo_flip_bright_water", "csgo_flip", "Flip Knife", "Bright Water", 16, 0
-"csgo_flip_freehand", "csgo_flip", "Flip Knife", "Freehand", 17, 0
-"csgo_flip_gamma_doppler", "csgo_flip", "Flip Knife", "Gamma Doppler", 18, 0
-"csgo_flip_lore", "csgo_flip", "Flip Knife", "Lore", 19, 0
+"csgo_flip_autotronic", "csgo_flip", "Flip Knife", "Autotronic", 14, 0, "nomaterial" 
+"csgo_flip_black_laminate", "csgo_flip", "Flip Knife", "Black Laminate", 15, 0, "nomaterial" 
+"csgo_flip_bright_water", "csgo_flip", "Flip Knife", "Bright Water", 16, 0, "nomaterial" 
+"csgo_flip_freehand", "csgo_flip", "Flip Knife", "Freehand", 17, 0, "nomaterial" 
+"csgo_flip_gamma_doppler", "csgo_flip", "Flip Knife", "Gamma Doppler", 18, 0, "nomaterial" 
+"csgo_flip_lore", "csgo_flip", "Flip Knife", "Lore", 19, 0, "nomaterial" 
 
 # Gut
-"csgo_gut_autotronic", "csgo_gut", "Gut Knife", "Autotronic", 14, 0
-"csgo_gut_black_laminate", "csgo_gut", "Gut Knife", "Black Laminate", 15, 0
-"csgo_gut_bright_water", "csgo_gut", "Gut Knife", "Bright Water", 16, 0
-"csgo_gut_freehand", "csgo_gut", "Gut Knife", "Freehand", 17, 0
-"csgo_gut_gamma_doppler", "csgo_gut", "Gut Knife", "Gamma Doppler", 18, 0
-"csgo_gut_lore", "csgo_gut", "Gut Knife", "Lore", 19, 0
+"csgo_gut_autotronic", "csgo_gut", "Gut Knife", "Autotronic", 14, 0, "nomaterial" 
+"csgo_gut_black_laminate", "csgo_gut", "Gut Knife", "Black Laminate", 15, 0, "nomaterial" 
+"csgo_gut_bright_water", "csgo_gut", "Gut Knife", "Bright Water", 16, 0, "nomaterial" 
+"csgo_gut_freehand", "csgo_gut", "Gut Knife", "Freehand", 17, 0, "nomaterial" 
+"csgo_gut_gamma_doppler", "csgo_gut", "Gut Knife", "Gamma Doppler", 18, 0, "nomaterial" 
+"csgo_gut_lore", "csgo_gut", "Gut Knife", "Lore", 19, 0, "nomaterial" 
 
 # Huntsman
-"csgo_huntsman_bright_water", "csgo_tactical", "Huntsman Knife", "Bright Water", 16, 0
-"csgo_huntsman_freehand", "csgo_tactical", "Huntsman Knife", "Freehand", 17, 0
-"csgo_huntsman_gamma_doppler", "csgo_tactical", "Huntsman Knife", "Gamma Doppler", 18, 0
+"csgo_huntsman_bright_water", "csgo_tactical", "Huntsman Knife", "Bright Water", 16, 0, "nomaterial" 
+"csgo_huntsman_freehand", "csgo_tactical", "Huntsman Knife", "Freehand", 17, 0, "nomaterial" 
+"csgo_huntsman_gamma_doppler", "csgo_tactical", "Huntsman Knife", "Gamma Doppler", 18, 0, "nomaterial" 
 
 # Karambit
-"csgo_karambit_autotronic", "csgo_karambit", "Karambit Knife", "Autotronic", 14, 0
-"csgo_karambit_black_laminate", "csgo_karambit", "Karambit Knife", "Black Laminate", 15, 0
-"csgo_karambit_bright_water", "csgo_karambit", "Karambit Knife", "Bright Water", 16, 0
-"csgo_karambit_freehand", "csgo_karambit", "Karambit Knife", "Freehand", 17, 0
-"csgo_karambit_gamma_doppler", "csgo_karambit", "Karambit Knife", "Gamma Doppler", 18, 0
-"csgo_karambit_lore", "csgo_karambit", "Karambit Knife", "Lore", 19, 0
+"csgo_karambit_autotronic", "csgo_karambit", "Karambit Knife", "Autotronic", 14, 0, "nomaterial" 
+"csgo_karambit_black_laminate", "csgo_karambit", "Karambit Knife", "Black Laminate", 15, 0, "nomaterial" 
+"csgo_karambit_bright_water", "csgo_karambit", "Karambit Knife", "Bright Water", 16, 0, "nomaterial" 
+"csgo_karambit_freehand", "csgo_karambit", "Karambit Knife", "Freehand", 17, 0, "nomaterial" 
+"csgo_karambit_gamma_doppler", "csgo_karambit", "Karambit Knife", "Gamma Doppler", 18, 0, "nomaterial" 
+"csgo_karambit_lore", "csgo_karambit", "Karambit Knife", "Lore", 19, 0, "nomaterial" 
 
 # M9
-"csgo_m9_autotronic", "csgo_m9", "M9 Bayonet Knife", "Autotronic", 14, 0
-"csgo_m9_black_laminate", "csgo_m9", "M9 Bayonet Knife", "Black Laminate", 15, 0
-"csgo_m9_bright_water", "csgo_m9", "M9 Bayonet Knife", "Bright Water", 16, 0
-"csgo_m9_freehand", "csgo_m9", "M9 Bayonet Knife", "Freehand", 17, 0
-"csgo_m9_gamma_doppler", "csgo_m9", "M9 Bayonet Knife", "Gamma Doppler", 18, 0
-"csgo_m9_lore", "csgo_m9", "M9 Bayonet Knife", "Lore", 19, 0
+"csgo_m9_autotronic", "csgo_m9", "M9 Bayonet Knife", "Autotronic", 14, 0, "nomaterial" 
+"csgo_m9_black_laminate", "csgo_m9", "M9 Bayonet Knife", "Black Laminate", 15, 0, "nomaterial" 
+"csgo_m9_bright_water", "csgo_m9", "M9 Bayonet Knife", "Bright Water", 16, 0, "nomaterial" 
+"csgo_m9_freehand", "csgo_m9", "M9 Bayonet Knife", "Freehand", 17, 0, "nomaterial" 
+"csgo_m9_gamma_doppler", "csgo_m9", "M9 Bayonet Knife", "Gamma Doppler", 18, 0, "nomaterial" 
+"csgo_m9_lore", "csgo_m9", "M9 Bayonet Knife", "Lore", 19, 0, "nomaterial" 
