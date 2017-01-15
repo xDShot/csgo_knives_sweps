@@ -14,7 +14,7 @@ if ( SERVER ) then
   SWEP.AutoSwitchFrom = false
 
   if TTT then
-    SWEP.EquipMenuData = cvars.Bool("csgo_knives_canbuy", true) and { type = "item_weapon", desc = "knife_desc" } or nil
+    SWEP.EquipMenuData = nil
   end
 end
 
@@ -55,7 +55,7 @@ SWEP.AutoSpawnable = false
 
 -- CanBuy is a table of ROLE_* entries like ROLE_TRAITOR and ROLE_DETECTIVE. If
 -- a role is in this table, those players can buy this.
-SWEP.CanBuy = cvars.Bool("csgo_knives_canbuy", true) and { ROLE_TRAITOR } or nil
+SWEP.CanBuy = nil
 
 -- InLoadoutFor is a table of ROLE_* entries that specifies which roles should
 -- receive this weapon as soon as the round starts. In this case, none.
