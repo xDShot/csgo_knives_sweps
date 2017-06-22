@@ -325,7 +325,7 @@ function SWEP:DoAttack( Altfire )
 
   HitEntity:DispatchTraceAttack( damageinfo, tr, Forward )
 
-  if tr.HitWorld then --and ( game.SinglePlayer() or CLIENT ) 
+  if tr.HitWorld and not tr.HitSky then --and ( game.SinglePlayer() or CLIENT ) 
 
     if cvars.Bool("csgo_knives_decals", true) then util.Decal( "ManhackCut", AttackSrc - Forward, AttackEnd + Forward, true ) end
 
