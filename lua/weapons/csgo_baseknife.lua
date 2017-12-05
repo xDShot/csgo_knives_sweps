@@ -136,13 +136,13 @@ end
 
 
 
-local function FuncPaintMaterial( vm, ply, weapon )
+function SWEP:PreDrawViewModel( vm, weapon, ply )
   if not ( IsValid( vm ) and IsValid( weapon ) ) then 
---    print( "HookPaintMaterial FAIL" )
+--    print( self, "PreDrawViewModel FAIL" )
     return 
   end
   
---  print( "HookPaintMaterial", "vm", vm, vm:GetModel(), "\n",
+--  print( self, "PreDrawViewModel", "vm", vm, vm:GetModel(), "\n",
 --  "ply", ply, ply:GetModel(), "\n",
 --  "weapon", weapon, weapon:GetModel(), "\n",
 --  "weapon.PaintMaterial", weapon.PaintMaterial, "\n",
@@ -159,8 +159,6 @@ local function FuncPaintMaterial( vm, ply, weapon )
     vm:SetSkin( vm:GetSkin() or 0 )
   end
 end
-
-hook.Add( "PreDrawViewModel", "HookPaintMaterial", FuncPaintMaterial )
 
 
 
