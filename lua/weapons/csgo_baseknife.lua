@@ -229,7 +229,7 @@ function SWEP:FindHullIntersection(VecSrc, tr, Mins, Maxs, pEntity)
         tmpTrace = util.TraceLine( tracedata )
 
         if tmpTrace.Hit then
-          ThisDistance = (tmpTrace.HitPos - VecSrc):Length()
+          local ThisDistance = (tmpTrace.HitPos - VecSrc):Length()
           if (ThisDistance < Distance) then
             tr = tmpTrace
             Distance = ThisDistance
@@ -342,9 +342,9 @@ function SWEP:DoAttack( Altfire )
   end
 
   -- Change next attack time
-  local NextAttack = Altfire and 1.0 or DidHit and 0.5 or 0.4
-  Weapon:SetNextPrimaryFire( CurTime() + NextAttack )
-  Weapon:SetNextSecondaryFire( CurTime() + NextAttack )
+  local NextAttack = CurTime() + ( Altfire and 1.0 or DidHit and 0.5 or 0.4 )
+  Weapon:SetNextPrimaryFire( NextAttack )
+  Weapon:SetNextSecondaryFire( NextAttack )
 
   -- Send animation to attacker
   Attacker:SetAnimation( PLAYER_ATTACK1 )
