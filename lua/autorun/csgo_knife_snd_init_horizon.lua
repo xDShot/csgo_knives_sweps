@@ -81,6 +81,15 @@ sound.Add( {
 } )
 
 sound.Add( {
+	name = "csgo_knife.Widow.LookAt2.Start_shorter",
+	channel = CHAN_WEAPON,
+	volume = 0.3,
+	pitch = 100,
+	level = 65,
+	sound = { "csgo_knife/horizon/widow_lookat2_start_shorter.wav" }
+} )
+
+sound.Add( {
 	name = "csgo_knife.Widow.LookAt2.End",
 	channel = CHAN_WEAPON,
 	volume = 0.3,
