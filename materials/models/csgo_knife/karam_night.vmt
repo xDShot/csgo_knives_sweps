@@ -1,18 +1,11 @@
-"VertexLitGeneric"
+//
+patch
 {
-		"$baseTexture" "models\csgo_knife\karam_night"
-	
-	"$phong" "1"
-	"$phongboost" "26"
-	"$phongalbedoboost" "40"
-	"$phongfresnelranges" "[.8 .8 1]"
-	"$phongexponenttexture" "models\csgo_knife\karam_ao"
-	
-	 
-	"$basemapalphaphongmask" "1"
-
-	"phongintensity"		"26"	
-	
-	"$phongdisablehalflambert" "1"
+include "materials/models/csgo_knife/knives_shared.vmt"
+insert
+{
+$basetexture "models/csgo_knife/karam_night"
+$bumpmap "models/csgo_knife/karam_so_normal"
+$phongexponenttexture "models/csgo_knife/karam_so_exponent"
 }
-
+}

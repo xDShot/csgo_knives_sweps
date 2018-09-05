@@ -1,0 +1,96 @@
+//
+CustomWeapon
+{
+	//paint.vmt///
+	
+	//-------------------------------------------------
+	// START PREVIEW STUFF
+	//-------------------------------------------------
+	"$PREVIEW" 1
+
+	//-------------------------------------------------
+	// SAME FOR EVERY PAINT TYPE -- DON'T EDIT
+	//-------------------------------------------------
+	"$grungetexture" "models\weapons\customization\shared\gun_grunge"
+	"$weartexture" "models\weapons\customization\shared\paint_wear"
+	
+	//damascus.vmt///
+	//-------------------------------------------------
+		// MUST SET THIS BLOCK PER PAINT
+		//-------------------------------------------------
+		"$paintname" "aq_damascus"
+		"$description_string" "#PaintKit_aq_forced"
+		"$description_english" "It was given a forced patina using lemon and mustard dripped onto the surface."
+		"$description_tag" "#PaintKit_aq_forced_Tag"
+		"$description_tag_english" "Forced"
+		
+		// PAINT PATTERN TEXTURE
+		"$painttexture" "models\weapons\customization\paints\antiqued\damascus"
+		// CAMO COLORS
+		"$camocolor0"		"[115 108 100]" // nicked edge color
+		"$camocolor1"		"[115 108 100]" // clean base color multiplier
+		"$camocolor2"		"[115 108 100]" // worn base color multiplier
+		"$camocolor3"		"[61 67 76]" // oil accretion color
+		// PAINT STYLE: 1 = SOLID COLORS, 2 = HYDROGRAPHIC, 3 = SPRAYPAINTED, 
+		// 		4 = ANODIZED SOLID COLORS, 5 = ANODIZED PATTERNED, 6 = ANODIZED AIRBRUSHED, 
+		//		7 = CUSTOM TEXTURE APPLIQUE, 
+		//		8 = PATINA/ANTIQUED
+		"$paintstyle"	8
+		// TEXTURE UV TRANFORMs
+		"$PATTERNTEXTURETRANSFORM" "scale 2 2 translate 0 .2 rotate 0"
+		// PHONG ALBEDO BOOST FOR PAINT
+		"$PAINTPHONGALBEDOBOOST" 50
+		// PHONG EXPONENT FOR PAINTS
+		"$PHONGEXPONENT" 16
+		// PHONG INTENSITY FOR PAINTS
+		"$PHONGINTENSITY" 1
+	
+	//master.vmt, useless///
+	
+	//and the knife itself///
+	//-------------------------------------------------
+		// MUST SET THIS BLOCK PER WEAPON
+		//-------------------------------------------------
+
+		"$surfacetexture" "models\weapons\customization\knife_ursus\knife_ursus_surface"
+		"$maskstexture" "models\weapons\customization\knife_ursus\knife_ursus_masks"
+		"$aotexture" "models\weapons\customization\knife_ursus\knife_ursus_ao"
+		"$postexture" "models\weapons\customization\knife_ursus\knife_ursus_pos"
+		"$exptexture" "models\weapons\v_models\knife_ursus\knife_ursus_exponent"
+		"$WEARTEXTURETRANSFORM" "scale 1 1 translate 0 0 rotate 0"
+		"$GRUNGETEXTURETRANSFORM" "scale 1 1 translate 0 0 rotate 0"
+		
+		// SET THIS IF $PHONGALBEDOTINT IS ENABLED ON THE ORIGINAL WEAPON MATERIAL
+		"$PREVIEWPHONGALBEDOTINT" 1
+		
+		// SET THIS IF $ENVMAP IS ENABLED ON THE ORIGINAL WEAPON MATERIAL
+		"$PREVIEWENVMAP" 1
+		
+		// WEAR PROGRESSION FACTOR
+		"$WEARPROGRESS" 0.02
+		
+		"$PREVIEWWEAPONOBJSCALE" 0.403
+		// scale for knives is relative to a 2048 texture being 18 units in the world, instead of the 36 units used for guns
+		"$PREVIEWWEAPONUVSCALE" 0.505
+		
+	//everything else missing//
+	"$flags" "0"
+	"$flags_defined" "0"
+	"$flags2" "262146"
+	"$flags_defined2" "0"
+	"$alpha" "1.000000"
+	"$frame" "0"
+	"$color" "[ 1.000000 1.000000 1.000000 ]"
+	"$color2" "[ 1.000000 1.000000 1.000000 ]"
+	"$srgbtint" "[ 1.000000 1.000000 1.000000 ]"
+	"$basediffuseoverride" "0"
+	"$cheapmode" "0"
+	"$phongalbedofactor" "1.000000"
+	"$previewignoreweaponscale" "0"
+}
+
+
+
+
+
+
