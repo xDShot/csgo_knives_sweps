@@ -17,6 +17,8 @@ parser.add_argument('-b', default='csgo_baseknife', help='name of base class')
 
 args = parser.parse_args()
 
+horizon_hack = ( args.l == "kniveslist_horizon.txt" )
+
 Weapon_file = io.open(args.wt, 'r')
 Weapon_text = Weapon_file.read()
 Weapon_file.close()
@@ -53,9 +55,17 @@ for line in List_file:
     Equip_Menu = '''{ type = "item_weapon", desc = "knife_desc" }'''
     Can_buy = "{ ROLE_TRAITOR }"
     
+    v_Model_name = "v_" + Model_name
+    w_Model_name = "w_" + Model_name
+    
+    if horizon_hack:
+        v_Model_name = "horizon/" + v_Model_name
+        w_Model_name = "horizon/" + w_Model_name
+    
     Format = {'basename':Base_name,
               'luaname':Lua_name,
-              'modelname':Model_name,
+              'v_modelname':v_Model_name,
+              'w_modelname':w_Model_name,
               'skinindex':Skin_index,
               'printname':Print_name,
               'aredaggers':Are_daggers,

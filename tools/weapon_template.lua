@@ -29,8 +29,8 @@ SWEP.Category       = 'CS:GO Knives'
 SWEP.Spawnable      = true
 SWEP.AdminSpawnable = true
 
-SWEP.ViewModel      = 'models/weapons/v_{modelname}.mdl'
-SWEP.WorldModel     = 'models/weapons/w_{modelname}.mdl'
+SWEP.ViewModel      = 'models/weapons/{v_modelname}.mdl'
+SWEP.WorldModel     = 'models/weapons/{w_modelname}.mdl'
 
 SWEP.SkinIndex      = {skinindex}
 SWEP.PaintMaterial  = {paintmaterial}

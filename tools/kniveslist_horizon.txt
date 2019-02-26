@@ -1,0 +1,19 @@
+# Empty lines and lines starting from hashtag are ignored.
+
+# Lua_name, Model_name, Knife_name, Skin_name, Skin_index, Are_daggers, Paint_material
+
+# Navaja
+
+"csgo_navaja", "csgo_navaja", "Navaja Knife", "noskin", 0, 0, "nomaterial"
+
+# Stiletto
+
+"csgo_stiletto", "csgo_stiletto", "Stiletto Knife", "noskin", 0, 0, "nomaterial"
+
+# Talon
+
+"csgo_talon", "csgo_talon", "Talon Knife", "noskin", 0, 0, "nomaterial"
+
+# Ursus
+
+"csgo_ursus", "csgo_ursus", "Ursus Knife", "noskin", 0, 0, "nomaterial"
