@@ -21,9 +21,9 @@
 "csgo_butterfly_gamma_doppler", "csgo_butterfly", "Butterfly Knife", "Gamma Doppler", 18, 0, "nomaterial" 
 
 # Shadow Daggers
-"csgo_daggers_bright_water", "csgo_push", "Shadow Daggers", "Bright Water", 17, 0, "nomaterial" 
-"csgo_daggers_freehand", "csgo_push", "Shadow Daggers", "Freehand", 18, 0, "nomaterial" 
-"csgo_daggers_gamma_doppler", "csgo_push", "Shadow Daggers", "Gamma Doppler", 19, 0, "nomaterial" 
+"csgo_daggers_bright_water", "csgo_push", "Shadow Daggers", "Bright Water", 17, 1, "nomaterial" 
+"csgo_daggers_freehand", "csgo_push", "Shadow Daggers", "Freehand", 18, 1, "nomaterial" 
+"csgo_daggers_gamma_doppler", "csgo_push", "Shadow Daggers", "Gamma Doppler", 19, 1, "nomaterial" 
 
 # Falchion
 "csgo_falchion_bright_water", "csgo_falchion", "Falchion Knife", "Bright Water", 16, 0, "nomaterial" 
