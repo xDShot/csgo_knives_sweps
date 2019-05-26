@@ -263,7 +263,6 @@ end
 
 
 function SWEP:DoAttack( Altfire )
-  local Weapon    = self.Weapon
   local Attacker  = self:GetOwner()
   local Range     = Altfire and 48 or 64
 
@@ -343,8 +342,8 @@ function SWEP:DoAttack( Altfire )
 
   -- Change next attack time
   local NextAttack = CurTime() + ( Altfire and 1.0 or DidHit and 0.5 or 0.4 )
-  Weapon:SetNextPrimaryFire( NextAttack )
-  Weapon:SetNextSecondaryFire( NextAttack )
+  self:SetNextPrimaryFire( NextAttack )
+  self:SetNextSecondaryFire( NextAttack )
 
   -- Send animation to attacker
   Attacker:SetAnimation( PLAYER_ATTACK1 )
@@ -352,7 +351,7 @@ function SWEP:DoAttack( Altfire )
   -- Send animation to viewmodel
   local Act = DidHit and ( Altfire and ( Backstab and ACT_VM_SWINGHARD or ACT_VM_HITCENTER2 ) or ( Backstab and ACT_VM_SWINGHIT or ACT_VM_HITCENTER ) ) or ( Altfire and ACT_VM_MISSCENTER2 or ACT_VM_MISSCENTER )
   if Act then
-    Weapon:SendWeaponAnim( Act )
+    self:SendWeaponAnim( Act )
     self:SetIdleTime( CurTime() + self.Owner:GetViewModel():SequenceDuration() )
   end
 
@@ -365,8 +364,8 @@ function SWEP:DoAttack( Altfire )
   local SlashSnd    = Oldsounds and Sound("csgo_knife.Slash_old") or Sound("csgo_knife.Slash")
 
   local Snd = DidHitPlrOrNPC and ( Altfire and StabSnd or HitSnd ) or DidHit and HitwallSnd or SlashSnd
-  Weapon:EmitSound( Snd )
-  
+  self:EmitSound( Snd )
+
   Attacker:LagCompensation(false) -- Don't forget to disable it!
 end
 
