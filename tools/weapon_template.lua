@@ -1,12 +1,12 @@
-if not file.Exists( 'weapons/{basename}.lua', 'LUA' ) then
-  SWEP.Spawnable = false 
-  print( '{luaname} failed to initialize: {basename}.lua not found. Did you install the main part?' )
-  return 
+if not file.Exists( "weapons/{basename}.lua", "LUA" ) then
+  SWEP.Spawnable = false
+  print( "{luaname} failed to initialize: {basename}.lua not found. Did you install the main part?" )
+  return
 end
 
 local TTT = ( GAMEMODE_NAME == "terrortown" or cvars.Bool("csgo_knives_force_ttt", false) )
 
-DEFINE_BASECLASS( '{basename}' )
+DEFINE_BASECLASS( "{basename}" )
 
 if ( SERVER ) then
   SWEP.Weight         = 5
@@ -24,13 +24,13 @@ if ( CLIENT ) then
 end
 
 SWEP.PrintName      = {printname}
-SWEP.Category       = 'CS:GO Knives'
+SWEP.Category       = "CS:GO Knives"
 
 SWEP.Spawnable      = true
 SWEP.AdminSpawnable = true
 
-SWEP.ViewModel      = 'models/weapons/{v_modelname}.mdl'
-SWEP.WorldModel     = 'models/weapons/{w_modelname}.mdl'
+SWEP.ViewModel      = "models/weapons/{v_modelname}.mdl"
+SWEP.WorldModel     = "models/weapons/{w_modelname}.mdl"
 
 SWEP.SkinIndex      = {skinindex}
 SWEP.PaintMaterial  = {paintmaterial}

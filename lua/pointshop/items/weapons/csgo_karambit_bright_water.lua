@@ -1,8 +1,8 @@
-ITEM.Name = 'Karambit Knife' .. ' | ' .. 'Bright Water'
+ITEM.Name = "Karambit Knife" .. " | " .. "Bright Water"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/w_csgo_karambit.mdl'
+ITEM.Model = "models/weapons/w_csgo_karambit.mdl"
 ITEM.Skin = 16
-ITEM.WeaponClass = 'csgo_karambit_bright_water'
+ITEM.WeaponClass = "csgo_karambit_bright_water"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

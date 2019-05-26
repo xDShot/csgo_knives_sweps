@@ -1,8 +1,8 @@
-ITEM.Name = 'Flip Knife' .. ' | ' .. 'Autotronic'
+ITEM.Name = "Flip Knife" .. " | " .. "Autotronic"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/w_csgo_flip.mdl'
+ITEM.Model = "models/weapons/w_csgo_flip.mdl"
 ITEM.Skin = 14
-ITEM.WeaponClass = 'csgo_flip_autotronic'
+ITEM.WeaponClass = "csgo_flip_autotronic"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

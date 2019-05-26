@@ -1,8 +1,8 @@
-ITEM.Name = 'Stiletto Knife'
+ITEM.Name = "Stiletto Knife"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/horizon/w_csgo_stiletto.mdl'
+ITEM.Model = "models/weapons/horizon/w_csgo_stiletto.mdl"
 ITEM.Skin = 0
-ITEM.WeaponClass = 'csgo_stiletto'
+ITEM.WeaponClass = "csgo_stiletto"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

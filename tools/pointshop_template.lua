@@ -1,8 +1,8 @@
 ITEM.Name = {printname}
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/{w_modelname}.mdl'
+ITEM.Model = "models/weapons/{w_modelname}.mdl"
 ITEM.Skin = {skinindex}
-ITEM.WeaponClass = '{luaname}'
+ITEM.WeaponClass = "{luaname}"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

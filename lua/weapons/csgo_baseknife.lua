@@ -43,7 +43,7 @@ if ( CLIENT ) then
   SWEP.CSMuzzleFlashes  = true
   SWEP.UseHands         = true
   SWEP.ViewModelFlip    = cvars.Bool("cl_csgo_knives_lefthanded", false) -- ToDo
-  
+
 end
 
 SWEP.Category              = "CS:GO Knives"
@@ -137,11 +137,11 @@ end
 
 
 function SWEP:PreDrawViewModel( vm, weapon, ply )
-  if not ( IsValid( vm ) and IsValid( weapon ) ) then 
+  if not ( IsValid( vm ) and IsValid( weapon ) ) then
 --    print( self, "PreDrawViewModel FAIL" )
-    return 
+    return
   end
-  
+
 --  print( self, "PreDrawViewModel", "vm", vm, vm:GetModel(), "\n",
 --  "ply", ply, ply:GetModel(), "\n",
 --  "weapon", weapon, weapon:GetModel(), "\n",
@@ -164,8 +164,8 @@ end
 
 function SWEP:Think()
   self.ViewModelFlip = cvars.Bool("cl_csgo_knives_lefthanded", false)
-  if CurTime()>=self:GetIdleTime() then
-    self.Weapon:SendWeaponAnim( ACT_VM_IDLE )
+  if CurTime() >= self:GetIdleTime() then
+    self:SendWeaponAnim( ACT_VM_IDLE )
     self:SetIdleTime( CurTime() + self.Owner:GetViewModel():SequenceDuration() )
   end
 end
@@ -175,9 +175,9 @@ end
 function SWEP:Deploy()
   self:SetInspectTime( 0 )
   self:SetIdleTime( CurTime() + self.Owner:GetViewModel():SequenceDuration() )
-  self.Weapon:SendWeaponAnim( ACT_VM_DRAW )
-  self.Weapon:SetNextPrimaryFire( CurTime() + 1 )
-  self.Weapon:SetNextSecondaryFire( CurTime() + 1 )
+  self:SendWeaponAnim( ACT_VM_DRAW )
+  self:SetNextPrimaryFire( CurTime() + 1 )
+  self:SetNextSecondaryFire( CurTime() + 1 )
   return true
 end
 
@@ -185,7 +185,7 @@ end
 
 function SWEP:EntityFaceBack(ent)
   local angle = self.Owner:GetAngles().y -ent:GetAngles().y
-  if angle < -180 then angle = 360 +angle end
+  if angle < -180 then angle = 360 + angle end
   if angle <= 90 and angle >= -90 then return true end
   return false
 end
@@ -198,7 +198,7 @@ function SWEP:FindHullIntersection(VecSrc, tr, Mins, Maxs, pEntity)
 
   local tracedata = {}
 
-  tracedata.start  = VecSrc  
+  tracedata.start  = VecSrc
   tracedata.endpos = VecHullEnd
   tracedata.filter = pEntity
   tracedata.mask   = MASK_SOLID
@@ -220,9 +220,9 @@ function SWEP:FindHullIntersection(VecSrc, tr, Mins, Maxs, pEntity)
 
         local VecEnd = Vector()
 
-        VecEnd.x = VecHullEnd.x + (i>0 and Maxs.x or Mins.x)
-        VecEnd.y = VecHullEnd.y + (j>0 and Maxs.y or Mins.y)
-        VecEnd.z = VecHullEnd.z + (k>0 and Maxs.z or Mins.z)
+        VecEnd.x = VecHullEnd.x + (i > 0 and Maxs.x or Mins.x)
+        VecEnd.y = VecHullEnd.y + (j > 0 and Maxs.y or Mins.y)
+        VecEnd.z = VecHullEnd.z + (k > 0 and Maxs.z or Mins.z)
 
         tracedata.endpos = VecEnd
 
@@ -247,7 +247,7 @@ end
 function SWEP:PrimaryAttack()
   local prim = cvars.Bool("csgo_knives_primary", true)
   local sec  = cvars.Bool("csgo_knives_secondary", true)
-  if not ( prim or sec ) or ( CurTime() < self.Weapon:GetNextPrimaryFire() ) then return end
+  if not ( prim or sec ) or ( CurTime() < self:GetNextPrimaryFire() ) then return end
   self:DoAttack( not prim ) -- If we can do primary attack, do it. Otherwise - do secondary.
 end
 
@@ -256,7 +256,7 @@ end
 function SWEP:SecondaryAttack()
   local prim = cvars.Bool("csgo_knives_primary", true)
   local sec  = cvars.Bool("csgo_knives_secondary", true)
-  if not ( prim or sec ) or ( CurTime() < self.Weapon:GetNextSecondaryFire() ) then return end
+  if not ( prim or sec ) or ( CurTime() < self:GetNextSecondaryFire() ) then return end
   self:DoAttack( sec ) -- If we can do secondary attack, do it. Otherwise - do primary.
 end
 
@@ -283,19 +283,19 @@ function SWEP:DoAttack( Altfire )
 
   local tr = util.TraceLine( tracedata )
   if not tr.Hit then tr = util.TraceHull( tracedata ) end
-  if tr.Hit and ( not (IsValid(tr.Entity) and tr.Entity) or tr.HitWorld ) then 
+  if tr.Hit and ( not (IsValid(tr.Entity) and tr.Entity) or tr.HitWorld ) then
     -- Calculate the point of intersection of the line (or hull) and the object we hit
     -- This is and approximation of the "best" intersection
     local HullDuckMins, HullDuckMaxs = Attacker:GetHullDuck()
     tr = self:FindHullIntersection(AttackSrc, tr, HullDuckMins, HullDuckMaxs, Attacker)
     AttackEnd = tr.HitPos -- This is the point on the actual surface (the hull could have hit space)
-  end 
+  end
 
   local DidHit = tr.Hit and not tr.HitSky
   local HitEntity = IsValid(tr.Entity) and tr.Entity or Entity(0) -- Ugly hack to destroy glass surf. 0 is worldspawn.
   local DidHitPlrOrNPC = HitEntity and ( HitEntity:IsPlayer() or HitEntity:IsNPC() ) and IsValid( HitEntity )
 
-  local FirstHit = not Altfire and ( ( self.Weapon:GetNextPrimaryFire() + 0.4 ) < CurTime() ) -- First swing does full damage, subsequent swings do less
+  local FirstHit = not Altfire and ( ( self:GetNextPrimaryFire() + 0.4 ) < CurTime() ) -- First swing does full damage, subsequent swings do less
 
   tr.HitGroup = HITGROUP_GENERIC -- Hack to disable damage scaling. No matter where we hit it, the damage should be as is.
 
@@ -312,7 +312,7 @@ function SWEP:DoAttack( Altfire )
   local Force = Forward:GetNormalized() * 300 * cvars.Number("phys_pushscale", 1) -- simplified result of CalculateMeleeDamageForce()
 
   local damageinfo = DamageInfo()
- 
+
   damageinfo:SetAttacker( Attacker )
   damageinfo:SetInflictor( self )
   damageinfo:SetDamage( Damage )
@@ -383,7 +383,7 @@ function SWEP:Reload()
     self:SetInspectTime( CurTime() + 0.1 ) -- We should press R repeately instead of holding it to loop
     return end
 
-  self.Weapon:SendWeaponAnim(ACT_VM_IDLE_LOWERED)
+  self:SendWeaponAnim(ACT_VM_IDLE_LOWERED)
   self:SetIdleTime( CurTime() + self.Owner:GetViewModel():SequenceDuration() )
   self:SetInspectTime( CurTime() + 0.1 )
 end

@@ -1,12 +1,12 @@
-if not file.Exists( 'weapons/csgo_baseknife.lua', 'LUA' ) then
-  SWEP.Spawnable = false 
-  print( 'csgo_daggers failed to initialize: csgo_baseknife.lua not found. Did you install the main part?' )
-  return 
+if not file.Exists( "weapons/csgo_baseknife.lua", "LUA" ) then
+  SWEP.Spawnable = false
+  print( "csgo_daggers failed to initialize: csgo_baseknife.lua not found. Did you install the main part?" )
+  return
 end
 
 local TTT = ( GAMEMODE_NAME == "terrortown" or cvars.Bool("csgo_knives_force_ttt", false) )
 
-DEFINE_BASECLASS( 'csgo_baseknife' )
+DEFINE_BASECLASS( "csgo_baseknife" )
 
 if ( SERVER ) then
   SWEP.Weight         = 5
@@ -23,14 +23,14 @@ if ( CLIENT ) then
   SWEP.SlotPos      = 0
 end
 
-SWEP.PrintName      = 'Shadow Daggers'
-SWEP.Category       = 'CS:GO Knives'
+SWEP.PrintName      = "Shadow Daggers"
+SWEP.Category       = "CS:GO Knives"
 
 SWEP.Spawnable      = true
 SWEP.AdminSpawnable = true
 
-SWEP.ViewModel      = 'models/weapons/v_csgo_push.mdl'
-SWEP.WorldModel     = 'models/weapons/w_csgo_push.mdl'
+SWEP.ViewModel      = "models/weapons/v_csgo_push.mdl"
+SWEP.WorldModel     = "models/weapons/w_csgo_push.mdl"
 
 SWEP.SkinIndex      = 0
 SWEP.PaintMaterial  = nil

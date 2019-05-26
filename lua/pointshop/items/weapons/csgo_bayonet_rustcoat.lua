@@ -1,8 +1,8 @@
-ITEM.Name = 'Bayonet Knife' .. ' | ' .. 'Rust Coat'
+ITEM.Name = "Bayonet Knife" .. " | " .. "Rust Coat"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/w_csgo_bayonet.mdl'
+ITEM.Model = "models/weapons/w_csgo_bayonet.mdl"
 ITEM.Skin = 12
-ITEM.WeaponClass = 'csgo_bayonet_rustcoat'
+ITEM.WeaponClass = "csgo_bayonet_rustcoat"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

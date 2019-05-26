@@ -1,8 +1,8 @@
-ITEM.Name = 'Butterfly Knife' .. ' | ' .. 'Ultraviolet'
+ITEM.Name = "Butterfly Knife" .. " | " .. "Ultraviolet"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/w_csgo_butterfly.mdl'
+ITEM.Model = "models/weapons/w_csgo_butterfly.mdl"
 ITEM.Skin = 10
-ITEM.WeaponClass = 'csgo_butterfly_ultraviolet'
+ITEM.WeaponClass = "csgo_butterfly_ultraviolet"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

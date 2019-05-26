@@ -1,8 +1,8 @@
-ITEM.Name = 'Bowie knife' .. ' | ' .. 'Freehand'
+ITEM.Name = "Bowie knife" .. " | " .. "Freehand"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/w_csgo_bowie.mdl'
+ITEM.Model = "models/weapons/w_csgo_bowie.mdl"
 ITEM.Skin = 17
-ITEM.WeaponClass = 'csgo_bowie_freehand'
+ITEM.WeaponClass = "csgo_bowie_freehand"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

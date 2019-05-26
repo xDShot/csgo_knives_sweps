@@ -1,8 +1,8 @@
-ITEM.Name = 'Shadow Daggers' .. ' | ' .. 'Night'
+ITEM.Name = "Shadow Daggers" .. " | " .. "Night"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/w_csgo_push.mdl'
+ITEM.Model = "models/weapons/w_csgo_push.mdl"
 ITEM.Skin = 7
-ITEM.WeaponClass = 'csgo_daggers_night'
+ITEM.WeaponClass = "csgo_daggers_night"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

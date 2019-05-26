@@ -1,8 +1,8 @@
-ITEM.Name = 'Huntsman Knife' .. ' | ' .. 'Night'
+ITEM.Name = "Huntsman Knife" .. " | " .. "Night"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/w_csgo_tactical.mdl'
+ITEM.Model = "models/weapons/w_csgo_tactical.mdl"
 ITEM.Skin = 7
-ITEM.WeaponClass = 'csgo_huntsman_night'
+ITEM.WeaponClass = "csgo_huntsman_night"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

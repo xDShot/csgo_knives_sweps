@@ -1,8 +1,8 @@
-ITEM.Name = 'CS:Source Knife'
+ITEM.Name = "CS:Source Knife"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/w_csgo_cssource.mdl'
+ITEM.Model = "models/weapons/w_csgo_cssource.mdl"
 ITEM.Skin = 0
-ITEM.WeaponClass = 'csgo_cssource'
+ITEM.WeaponClass = "csgo_cssource"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

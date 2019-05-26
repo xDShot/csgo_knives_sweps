@@ -1,8 +1,8 @@
-ITEM.Name = 'Ursus Knife'
+ITEM.Name = "Ursus Knife"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/horizon/w_csgo_ursus.mdl'
+ITEM.Model = "models/weapons/horizon/w_csgo_ursus.mdl"
 ITEM.Skin = 0
-ITEM.WeaponClass = 'csgo_ursus'
+ITEM.WeaponClass = "csgo_ursus"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

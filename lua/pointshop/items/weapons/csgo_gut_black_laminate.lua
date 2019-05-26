@@ -1,8 +1,8 @@
-ITEM.Name = 'Gut Knife' .. ' | ' .. 'Black Laminate'
+ITEM.Name = "Gut Knife" .. " | " .. "Black Laminate"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/w_csgo_gut.mdl'
+ITEM.Model = "models/weapons/w_csgo_gut.mdl"
 ITEM.Skin = 15
-ITEM.WeaponClass = 'csgo_gut_black_laminate'
+ITEM.WeaponClass = "csgo_gut_black_laminate"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

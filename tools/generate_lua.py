@@ -5,7 +5,7 @@ import io
 import argparse
 import ast
 
-Q = "'"
+Q = '"'
 
 parser = argparse.ArgumentParser(description='Automatically generate lua files using template and list of knives. Don\'t waste time on editing each lua, do it at once!')
 parser.add_argument('-wt', default='weapon_template.lua', help='weapon template file')

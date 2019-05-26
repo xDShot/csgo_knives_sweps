@@ -1,8 +1,8 @@
-ITEM.Name = 'Falchion Knife' .. ' | ' .. 'Bright Water'
+ITEM.Name = "Falchion Knife" .. " | " .. "Bright Water"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/w_csgo_falchion.mdl'
+ITEM.Model = "models/weapons/w_csgo_falchion.mdl"
 ITEM.Skin = 16
-ITEM.WeaponClass = 'csgo_falchion_bright_water'
+ITEM.WeaponClass = "csgo_falchion_bright_water"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

@@ -1,8 +1,8 @@
-ITEM.Name = 'Navaja Knife'
+ITEM.Name = "Navaja Knife"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/horizon/w_csgo_navaja.mdl'
+ITEM.Model = "models/weapons/horizon/w_csgo_navaja.mdl"
 ITEM.Skin = 0
-ITEM.WeaponClass = 'csgo_navaja'
+ITEM.WeaponClass = "csgo_navaja"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)

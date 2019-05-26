@@ -1,8 +1,8 @@
-ITEM.Name = 'Default CT Knife'
+ITEM.Name = "Default CT Knife"
 ITEM.Price = 20000
-ITEM.Model = 'models/weapons/w_csgo_default.mdl'
+ITEM.Model = "models/weapons/w_csgo_default.mdl"
 ITEM.Skin = 0
-ITEM.WeaponClass = 'csgo_default_knife'
+ITEM.WeaponClass = "csgo_default_knife"
 
 function ITEM:OnEquip(ply)
 	ply:Give(self.WeaponClass)
