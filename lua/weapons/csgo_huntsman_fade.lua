@@ -23,7 +23,7 @@ if ( CLIENT ) then
   SWEP.SlotPos      = 0
 end
 
-SWEP.PrintName      = "Huntsman Knife" .. " | " .. "Forest DDPAT"
+SWEP.PrintName      = "Huntsman Knife" .. " | " .. "Fade"
 SWEP.Category       = "CS:GO Knives"
 
 SWEP.Spawnable      = true
