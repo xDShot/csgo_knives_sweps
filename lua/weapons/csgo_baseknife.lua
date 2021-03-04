@@ -316,7 +316,7 @@ function SWEP:DoAttack( Altfire )
   damageinfo:SetAttacker( Attacker )
   damageinfo:SetInflictor( self )
   damageinfo:SetDamage( Damage )
-  damageinfo:SetDamageType( bit.bor( DMG_BULLET , DMG_NEVERGIB ) )
+  damageinfo:SetDamageType( bit.bor( DMG_SLASH , DMG_NEVERGIB ) )
   damageinfo:SetDamageForce( Force )
   damageinfo:SetDamagePosition( AttackEnd )
 
